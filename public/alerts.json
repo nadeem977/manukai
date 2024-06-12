@@ -1,0 +1,80 @@
+[
+    {
+      "img": "/img/flags/israel.png",
+      "name": "Israel-Hamas War",
+      "subname": "ISR",
+      "score": "+2.7",
+      "score2": "8.5",
+      "color": "#FF1717",
+      "color2": "#FF4117",
+      "location": "16 CRAWLEY GREEN RD, LUTON LU2 0QX, UK",
+      "from": "10 AUG 2023 - 10:00",
+      "to": "12 AUG 2023 - 23:59",
+      "credibility": "very high",
+      "impact": "extreme",
+      "description": "Lorem Ipsum",
+      "potential_targets": [
+        "Potential Target 1",
+        "Potential Target 2",
+        "Potential Target 3"
+      ],
+      "sources": [
+        "Source 1",
+        "Source 2"
+      ],
+      "lon": -74.50738466175103,
+      "lat": 39.99590587875167
+    },
+    {
+      "img": "/img/flags/romania.png",
+      "name": "Power Grid Cyberattack",
+      "subname": "ROU",
+      "score": "+8.9",
+      "score2": "8.5",
+      "color": "#FF1717",
+      "color2": "#FF5D17",
+      "location": "16 CRAWLEY GREEN RD, LUTON LU2 0QX, UK",
+      "from": "10 AUG 2023 - 10:00",
+      "to": "12 AUG 2023 - 23:59",
+      "credibility": "very high",
+      "impact": "extreme",
+      "description": "Lorem Ipsum",
+      "potential_targets": [
+        "Potential Target 1",
+        "Potential Target 2",
+        "Potential Target 3"
+      ],
+      "sources": [
+        "Source 1",
+        "Source 2"
+      ],
+      "lon": -74.50146113628244,
+      "lat": 40.00216797179124
+    },
+    {
+      "img": "/img/flags/switzerland.png",
+      "name": "Hospital Systems Breached",
+      "subname": "CH",
+      "score": "+0.0",
+      "score2": "8.5",
+      "color": "#45FF17",
+      "color2": "#FF7817",
+      "location": "16 CRAWLEY GREEN RD, LUTON LU2 0QX, UK",
+      "from": "10 AUG 2023 - 10:00",
+      "to": "12 AUG 2023 - 23:59",
+      "credibility": "very high",
+      "impact": "extreme",
+      "description": "Lorem Ipsum",
+      "potential_targets": [
+        "Potential Target 1",
+        "Potential Target 2",
+        "Potential Target 3"
+      ],
+      "sources": [
+        "Source 1",
+        "Source 2"
+      ],
+      "lon": -74.49403698436195,
+      "lat": 39.99427219511264
+    }
+]

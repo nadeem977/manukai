@@ -1,0 +1,268 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.top_bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+}
+
+.mapboxgl-ctrl-bottom-left .mapboxgl-ctrl {
+    display: none !important;
+}
+
+.mapboxgl-ctrl.mapboxgl-ctrl-attrib {
+    display: none !important;
+}
+
+.textDyn {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.setIcons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.mainnotif {
+    position: relative;
+}
+
+.bell {
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    background-color: #EC9121;
+    padding: 0px 5px; 
+    border-radius: 50%;
+}
+
+.mainnotif .bi { 
+    cursor: pointer;
+}
+
+.headingText {
+    color: #12A5C6;
+    font-size: 17px;
+    font-weight: 700;
+    margin: 0 5px;
+}
+
+.iconsflex {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.options {
+    background-color: #02181d !important;
+}
+
+.options:hover {
+    background-color: #02181d !important;
+}
+
+select .options:focus {
+    background-color: red !important;
+    color: green !important;
+}
+
+.mainChecks .form-check .form-check-label {
+    font-size: 11px !important;
+    color: #4ED2EF !important;
+    padding-left: 4px !important;
+    text-transform: capitalize !important;
+}
+.mainChecks{
+    margin-left: 1rem;
+}
+.mainChecks .form-check .form-check-input{
+ width: 13px;
+ height: 13px;
+}
+.selection option {
+    color: black;
+}
+
+.selectings option {
+    background-color: #02181d !important;
+}
+
+.selectings option:hover {
+    background: #12A5C6 !important;
+}
+
+.collapse {
+    visibility: visible !important;
+}
+
+.setHeight {
+    height: calc(100vh - 123px);
+}
+
+.alert-yellow,
+.alert-green,
+.alertred {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+
+}
+
+.alertred::before {
+    content: "";
+    display: inline-block;
+    background: #A0352B;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}
+
+.alert-yellow::before {
+    content: "";
+    display: inline-block;
+    background: #CCAD33;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}
+
+.alert-green::before {
+    content: "";
+    display: inline-block;
+    background: #4D9F69;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}
+
+.text_title {
+    font-weight: 700;
+    line-height: 38.19px;
+    letter-spacing: 0.15em;
+    color: #12A5C6;
+}
+.shadoBax{
+    box-shadow: 0px 4px 14px 0px #17CDFB30;
+}
+.selectoptions:focus{
+    box-shadow: none;
+    outline: 0;
+}
+.selectoptions::after{
+    color: white !important;
+    background-color: white !important;
+}
+.form-select:focus{
+    border:1px solid #12A5C6;
+}
+
+.form-select{
+    background-image: url("./assets/img/aro.png");
+}
+.tracking{
+    transition: all 0.4s;
+}
+
+.textshblack {
+    text-shadow: 0px 0px 3px 0px #000000CC !important;
+ }
+.notishado{
+    box-shadow: 0px 4px 14px 0px #17CDFB30;
+}
+.noticbtn{
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+.active{
+    color: #2CCAF0;
+}
+.noticbtn.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -9px; /* Adjust to place the line right under the button */
+    width: 100%;
+    height: 2px; /* Thickness of the line */
+    background-color: #2CCAF0; /* Color of the line */
+    animation: slideIn 0.3s ease-out;
+  }
+  
+  @keyframes slideIn {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+
+.manikaiGpth{
+height: calc(100vh - 208px);
+padding-bottom: 1rem;
+}
+.manikaigraphH{
+    height: calc(100vh - 180px);
+    padding-bottom: 1rem;   
+}
+.add-new-graph-button {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    border: 2px dashed #11333b;
+    border-radius: 5px;
+    background-color: #0f2128;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+ 
+
+  .charclass .apexcharts-legend{
+display: flex  !important;
+flex-direction: column !important; 
+justify-content: space-between !important;
+  }
+
+
+ .btns{
+    width: 100%;
+    padding: 10px;
+    /* background-color: #0f2128; */
+    border-radius: 10px;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    color: #C5F5FF;
+    justify-content: space-between;
+ }
+
+.notifcationbelslable label{
+    padding-top: 0px !important;
+}
+.lastBag label{
+    padding-left: 0px !important;
+}
+
+
+@media (max-width:800px) {
+    .header-logo {
+        display: block;
+        min-width: 98px;
+    }
+}
