@@ -427,12 +427,12 @@ const DashboardMayView = () => {
 													<div className='border-[2px] rounded px-1 border-[#4ED2EF] cursor-pointer'>
 														<AddIcon style={{ fontSize: "15px" }} /></div>
 												</div> :
-													<div className={`badge text-sm p-2`} style={{ background: `${bgColor2}` }}> {popupInfo?.score}</div>}
+													<div className={`badge text-[10px] leading-[12px] p-1`} style={{ background: `${bgColor2}` }}> {popupInfo?.score}</div>}
 
-												<div className='m-0 relative' onClick={() => setShowBellNotifcation(true)}><i className="bi bi-bell text-[#4ED2EF] cursor-pointer text-[28px]"></i>
+												<div className='m-0 relative' onClick={() => setShowBellNotifcation(true)}><i className="bi bi-bell text-[#4ED2EF] cursor-pointer text-[18px]"></i>
 
 													<div className={`absolute  bg-[#03191E4D] bg-opacity-10 backdrop-blur notishado ${showBellNotifcation ? "block" : 'hidden'}
-													 right-60 top-[-50%] w-[450px]  h-[424px] border-[1px] border-[#4ED2EF80] rounded-[16px]`}>
+													 right-60 top-[-50%] w-[452px]  h-[424px] border-[1px] border-[#4ED2EF80] rounded-[16px]`}>
 														<h1 className='p-2 mt-[2px] tracking-[0.15em] text-[#12A5C6] text-[18px] font-bold flex justify-between'>Notification setting
 															<div className='border-[2px] px-[1.9px] 
 															flex items-center justify-center rounded border-[#4ED2EF]
@@ -441,7 +441,7 @@ const DashboardMayView = () => {
 															{ e.stopPropagation();
 																setShowBellNotifcation(false)}
 															 }>
-																<i class="bi bi-dash text-[18px] text-white ml-[3px] font-bold"></i>
+																<i class="bi bi-dash text-[18px] text-white ml-[3px] font-bold leading-[0px]"></i>
 																</div>
 																</h1>
 
@@ -494,9 +494,10 @@ const DashboardMayView = () => {
 
 
 												</div>
-												<div className='border-[2px] p-[1.9px] rounded border-[#4ED2EF] cursor-pointer'
+												<div className='border-[2px] h-[15px] flex items-center justify-center rounded border-[#4ED2EF] cursor-pointer'
 													onClick={() => setState(prevState => ({ ...prevState, popupInfo: null, isPopupExpanded: false }))}>
-													<RemoveSharpIcon /></div>
+													<RemoveSharpIcon  />
+													</div>
 											</div>
 										</div>
 
@@ -511,8 +512,9 @@ const DashboardMayView = () => {
 						<div className='relative p-2  flex items-center gap-1'>
 						<p className='text-[#A1A1A1]'>Live Alerts </p> <p className='pr-5'>/ AI Predictive Alerts
 							  <small className='text-[#FFE600] text-[10px] mt-[-10px] top-3 absolute'>PRO</small></p>  
-							  <p className='pr-5 text-[#A1A1A1]'> / AI Heatmap 
-								<small className='text-[#FFE600] text-[10px] mt-[-10px] top-3 absolute'>PRO</small></p>
+							  /
+							  <p className='pr-5 text-[#A1A1A1]'>  AI Heatmap 
+								<small className='text-[#FFE600] text-[10px] mt-[-10px] top-3 absolute opacity-[0.80]'>PRO+</small></p>
 						</div>
 					</div>
 					<div className="bottom-right-fixed">
@@ -748,7 +750,7 @@ const SidebarInformations = () => {
 						IconComponent={KeyboardArrowDownIcon}
 						MenuProps={CustomMenuProps}  >
 						<MenuItem value="">
-							<em>Last Login [2d+4h35] </em>
+							<em style={{fontStyle:"normal"}}>Last Login [2d+4h35] </em>
 						</MenuItem>
 						<MenuItem value={10}>Ten</MenuItem>
 						<MenuItem value={20}>Twenty</MenuItem>

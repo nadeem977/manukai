@@ -357,37 +357,7 @@ const statistics2 = [
 ];
 
 
-export const SurveillanceManuKi = [
-	{
-		title: "Surveillance",
-		icon: <i class="bi bi-eye"></i>,
-		icon2: <Check />,
-		bg:"#0c262e",
-		submenu: [
-			{
-				title: "Sandbox",
-				url: "/int-deck/sandbox", 
-			},
-			{
-				title: "Intelligence Preset 1",
-				url: "/int-deck/intelligence-preset-1",
-				tweakText: <MoreVertIcon />,
-			},
-			{
-				title: "Intelligence Preset 2",
-				url: "/int-deck/intelligence-preset-2",
-				tweakText: <MoreVertIcon />,
-			},
-			{
-				title: "Create New Preset 3",
-				url: "/int-deck/intelligence-preset-3",
-				textstyle: "italic",
-				tweakText: <MoreVertIcon />
-			},
-		],
-	}
-]
-
+ 
 export const ManukaiSearch = [
 
 	{
@@ -421,34 +391,33 @@ export const ManukaiSearch = [
 	},
 	{
 		title: "ManukaiGPT",
-		icon: <ChatBubbleOutlineIcon />,
+		icon: <ChatBubbleOutlineIcon style={{color:"#C5F5FF"}} />,
 		bg:"#0e2b34",
-		url: "/ManukaiGPT",
+		url: "/int-deck/ManukaiGPT",
 		submenu: [
 			{
 				title: "New Chat",
-				url: "/ManukaiGPT",
+				url: "/int-deck/ManukaiGPT",
 				icon2: <i class="bi bi-three-dots-vertical"></i>,
 			},
 			{
 				title: 'Bali Airport',
-				url: "ManukaiGPT",
+				url: "/int-deck/ManukaiGPT",
 				bg: "#00E0FF33",
 				icon2: <i class="bi bi-three-dots-vertical"></i>
 			},
 			{
 				title: 'Amsterdam CS',
-				url: "ManukaiGPT",
+				url: "/int-deck/ManukaiGPT",
 				bg: "#00E0FF33",
 				icon2: <i class="bi bi-three-dots-vertical"></i>
 			},
 
 		],
 	},
-
 	{
 		title: "Map Intelligence",
-		icon: <NationalIcon />,
+		icon: <NationalIcon color="#C5F5FF"/>,
 		icon3: <Beta />,
 		bg:"#0e2b34",
 		submenu: [
@@ -462,44 +431,44 @@ export const ManukaiSearch = [
 	},
 	{
 		title: "Surveillance",
-		icon: <i class="bi bi-eye text-[16px]"></i>,
+		icon: <i class="bi bi-eye text-[16px] text-[#C5F5FF]"></i>,
 		bg:"#0e2b34",
 		submenu: [
 			{
 				title: "New Task",
-				url: "/Surveillance",
+				url: "/int-deck/Surveillance",
 				icon2: <i class="bi bi-three-dots-vertical"></i>,
 
 			},
 			{
 				title: "News Item Q",
-				url: "/Surveillance/Surveillance1",
+				url: "/int-deck/Surveillance1",
 				icon2: <><div className="bg-red-500 rounded-full w-[20px] h-[20px] flex items-center justify-center">4</div></>,
 				icon: <NewsItemsH />
 			},
 			{
 				title: "Social Media Item F",
-				url: "/Surveillance/Surveillance2",
+				url: "/int-deck/Surveillance2",
 				icon: <AIcons />,
 				icon2: <><div className="bg-yellow-500 text-black rounded-full w-[20px] h-[20px] flex items-center justify-center">2</div></>,
 			},
 			{
 				title: "Dark Web Item A",
-				url: "/Surveillance/Surveillance3",
+				url: "/int-deck/Surveillance3",
 				textstyle: "italic",
 				icon2: <><div className="bg-green-500 text-black rounded-full w-[20px] h-[20px] flex items-center justify-center">2</div></>,
 				icon: <IconsRadars />
 			},
 			{
 				title: "Dark Web Item B",
-				url: "/Surveillance/Surveillance4",
+				url: "/int-deck/Surveillance4",
 				textstyle: "italic",
 				icon2: <><div className="bg-green-500 text-black rounded-full w-[20px] h-[20px] flex items-center justify-center">2</div></>,
 				icon: <IconsRadars />
 			},
 			{
 				title: "News Item H",
-				url: "/Surveillance/Surveillance5",
+				url: "/int-deck/Surveillance5",
 				textstyle: "italic",
 				icon2: <><div className="bg-green-500 text-black rounded-full w-[20px] h-[20px] flex items-center justify-center">0</div></>,
 				icon: <NewsItemsH />
@@ -508,49 +477,48 @@ export const ManukaiSearch = [
 	},
 	 
 ];
-
 export const INTELLIGENCESidebAr = [
 	{
 		title: "Surveillance",
-		icon: <i class="bi bi-eye text-[16px]"></i>,
+		icon: <i class="bi bi-eye text-[16px] ml-1"></i>,
 		icon2: <Check />,
 		bg:"#0c262e",
 		submenu: [
 			{
 				title: "New Task",
-				url: "/Surveillance",
+				url: "/int-deck/Surveillance",
 				icon2: <EditIcons />,
 
 			},
 			{
 				title: "News Item Q",
-				url: "/Surveillance/Surveillance1",
+				url: "/int-deck/Surveillance1",
 				icon2: <><div className="bg-red-500 rounded-full w-[20px] h-[20px] flex items-center justify-center">4</div></>,
 				icon: <NewsItemsH />
 			},
 			{
 				title: "Social Media Item F",
-				url: "/Surveillance/Surveillance2",
+				url: "/int-deck/Surveillance2",
 				icon: <AIcons />,
 				icon2: <><div className="bg-yellow-500 text-black rounded-full w-[20px] h-[20px] flex items-center justify-center">2</div></>,
 			},
 			{
 				title: "Dark Web Item A",
-				url: "/Surveillance/Surveillance3",
+				url: "/int-deck/Surveillance3",
 				textstyle: "italic",
 				icon2: <><div className="bg-green-500 text-black rounded-full w-[20px] h-[20px] flex items-center justify-center">2</div></>,
 				icon: <IconsRadars />
 			},
 			{
 				title: "Dark Web Item B",
-				url: "/Surveillance/Surveillance4",
+				url: "/int-deck/Surveillance4",
 				textstyle: "italic",
 				icon2: <><div className="bg-green-500 text-black rounded-full w-[20px] h-[20px] flex items-center justify-center">2</div></>,
 				icon: <IconsRadars />
 			},
 			{
 				title: "News Item H",
-				url: "/Surveillance/Surveillance5",
+				url: "/int-deck/Surveillance5",
 				textstyle: "italic",
 				icon2: <><div className="bg-green-500 text-black rounded-full w-[20px] h-[20px] flex items-center justify-center">0</div></>,
 				icon: <NewsItemsH />
@@ -559,7 +527,7 @@ export const INTELLIGENCESidebAr = [
 	},
 	{
 		title: "Map Intelligence",
-		icon: <NationalIcon />,
+		icon: <NationalIcon color="#C5F5FF"/>,
 		icon3: <Beta />,
 		bg:"#0e2b34",
 		submenu: [
@@ -573,23 +541,23 @@ export const INTELLIGENCESidebAr = [
 	},
 	{
 		title: "ManukaiGPT",
-		icon: <ChatBubbleOutlineIcon />,
+		icon: <ChatBubbleOutlineIcon style={{color:"#C5F5FF"}}/>,
 		bg:"#0e2b34",
 		submenu: [
 			{
 				title: "New Chat",
-				url: "/ManukaiGPT",
+				url: "/int-deck/ManukaiGPT",
 				icon2:<i class="bi bi-three-dots-vertical"></i>,
 			},
 			{
 				title: 'Bali Airport',
-				url: "/ManukaiGPT/2",
+				url: "/int-deck/ManukaiGPT/2",
 				bg: "#00E0FF33",
 				icon2: <i class="bi bi-three-dots-vertical"></i>
 			},
 			{
 				title: 'Amsterdam CS',
-				url: "/ManukaiGPT/3",
+				url: "/int-deck/ManukaiGPT/3",
 				bg: "#00E0FF33",
 				icon2: <i class="bi bi-three-dots-vertical"></i>
 			},
@@ -598,7 +566,7 @@ export const INTELLIGENCESidebAr = [
 	},
 	{
 		title: "Manukai Search",
-		icon: <NovaEngineIcon />,
+		icon: <NovaEngineIcon color="#C5F5FF"/>,
 		bg:"#0e2b34",
 		submenu: [
 			{
@@ -634,28 +602,27 @@ export const ChatINTELLIGENCESidebAr = [
 		submenu: [
 			{
 				title: "New Chat",
-				url: "/ManukaiGPT",
+				url: "/int-deck/ManukaiGPT",
 				icon2: <EditIcons />,
 			},
 			{
 				title: 'Bali Airport',
-				url: "/ManukaiGPT/2",
+				url: "/int-deck/ManukaiGPT/2",
 				bg: "#00E0FF33",
 				icon2: <i class="bi bi-three-dots-vertical"></i>
 			},
 			{
 				title: 'Amsterdam CS',
-				url: "/ManukaiGPT/3",
+				url: "/int-deck/ManukaiGPT/3",
 				bg: "#00E0FF33",
 				icon2: <i class="bi bi-three-dots-vertical"></i>
 			},
 
 		],
 	},
-
 	{
 		title: "Map Intelligence",
-		icon: <NationalIcon />,
+		icon: <NationalIcon color="#C5F5FF"/>,
 		icon3: <Beta />,
 		bg:"#0e2b34",
 		submenu: [
@@ -669,45 +636,45 @@ export const ChatINTELLIGENCESidebAr = [
 	},
 	{
 		title: "Surveillance",
-		icon: <i class="bi bi-eye text-[16px]"></i>,
+		icon: <i class="bi bi-eye text-[16px] text-[#C5F5FF]"></i>,
 		bg:"#0e2b34",
-		url: "/Surveillance",
+		url: "/int-deck/Surveillance",
 		submenu: [
 			{
 				title: "New Task",
-				url: "/Surveillance",
+				url: "/int-deck/Surveillance",
 				icon2: <i class="bi bi-three-dots-vertical"></i>,
 
 			},
 			{
 				title: "News Item Q",
-				url: "/Surveillance/Surveillance1",
+				url: "/int-deck/Surveillance1",
 				icon2: <><div className="bg-red-500 rounded-full w-[20px] h-[20px] flex items-center justify-center">4</div></>,
 				icon: <NewsItemsH />
 			},
 			{
 				title: "Social Media Item F",
-				url: "/Surveillance/Surveillance2",
+				url: "/int-deck/Surveillance2",
 				icon: <AIcons />,
 				icon2: <><div className="bg-yellow-500 text-black rounded-full w-[20px] h-[20px] flex items-center justify-center">2</div></>,
 			},
 			{
 				title: "Dark Web Item A",
-				url: "/Surveillance/Surveillance3",
+				url: "/int-deck/Surveillance3",
 				textstyle: "italic",
 				icon2: <><div className="bg-green-500 text-black rounded-full w-[20px] h-[20px] flex items-center justify-center">2</div></>,
 				icon: <IconsRadars />
 			},
 			{
 				title: "Dark Web Item B",
-				url: "/Surveillance/Surveillance4",
+				url: "/int-deck/Surveillance4",
 				textstyle: "italic",
 				icon2: <><div className="bg-green-500 text-black rounded-full w-[20px] h-[20px] flex items-center justify-center">2</div></>,
 				icon: <IconsRadars />
 			},
 			{
 				title: "News Item H",
-				url: "/Surveillance/Surveillance5",
+				url: "/int-deck/Surveillance5",
 				textstyle: "italic",
 				icon2: <><div className="bg-green-500 text-black rounded-full w-[20px] h-[20px] flex items-center justify-center">0</div></>,
 				icon: <NewsItemsH />
@@ -716,7 +683,7 @@ export const ChatINTELLIGENCESidebAr = [
 	},
 	{
 		title: "Manukai Search",
-		icon: <NovaEngineIcon />,
+		icon: <NovaEngineIcon color="#C5F5FF" />,
 		bg:"#0e2b34",
 		submenu: [
 			{

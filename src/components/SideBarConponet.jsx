@@ -74,14 +74,12 @@ const SideBarComponent = ({ data }) => {
             <Accordion
               key={i}
               expanded={expanded === `panel${i}`}
-              onChange={handleChange(`panel${i}`)}
-            >
+              onChange={handleChange(`panel${i}`)}>
               <AccordionSummary
                 expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: '0.9rem', color: 'white' }} />}
                 aria-controls={`panel${i}-content`}
                 id={`panel${i}-header`}
-                style={{ ...stylesummry, background: item.icon2 ? "#0f2128" : item?.bg }}
-              >
+                style={{ ...stylesummry, background: item.icon2 ? "#0f2128" : item?.bg ,color:item.icon2 ?"white":"#C5F5FF" }}>
                 <div className="flex items-center gap-3 w-full text-[16px] pr-3">
                   {item.icon} {item.title} {item.icon2 || item?.icon3}
                 </div>
@@ -92,8 +90,7 @@ const SideBarComponent = ({ data }) => {
                     <li key={inx}>
                       <Link
                         to={subItem.url}
-                        className={`btns ${location === subItem.url ? "bg-[#0f2128]" : ""}`}
-                      >
+                        className={`btns ${location === subItem.url ? "bg-[#0f2128] text-white" : "textred"}`}>
                         {subItem.title} {subItem.icon2}
                       </Link>
                     </li>

@@ -40,7 +40,6 @@ const AccordionSummary = styled((props) => (
 
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
     padding: theme.spacing(2),
-    borderTop: '1px solid rgba(0, 0, 0, .125)',
 }));
 
 const Surveillance = () => {
@@ -102,7 +101,7 @@ const Surveillance = () => {
                             {tableData?.map((item, i) => (
                                 <React.Fragment key={i}>
                                     <Accordion expanded={expanded === `panel${i}`} onChange={handleChange(`panel${i}`)}
-                                        style={{ background: i % 2 === 0 ? "#0F252A" : "transparent", color: "white", padding: 0 }}>
+                                        style={{ background: i % 2 === 0 ? "#0F252A" : "transparent", color: "white", padding: 0,border:expanded === `panel${i}`?"1px solid #12A5C6":"" }}>
                                         <AccordionSummary style={{ padding: 0 }}
                                             expandIcon={<ArrowForwardIosSharpIcon style={{ color: "#54ACBF", fontSize: "15px", marginRight:"10px" }} />}
                                             aria-controls={`panel${i}-content`}
@@ -125,7 +124,7 @@ const Surveillance = () => {
                                             </div>
                                         </AccordionSummary>
                                         <AccordionDetails style={{padding:0}}>
-                                            <div className="flex gap-1 border-[1px] border-[#12A5C6]">
+                                            <div className="flex gap-1 ">
                                                 <div className="w-[90%] py-4 px-2">
                                                     <h1 className="text-[14px] font-bold">{item?.alarts}</h1>
                                                 </div>

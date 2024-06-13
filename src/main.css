@@ -36,8 +36,8 @@
 
 .bell {
     position: absolute;
-    top: 0px;
-    left: 10px;
+    top: 4px;
+    left: 15px;
     background-color: #EC9121;
     padding: 0px 5px; 
     border-radius: 50%;
@@ -265,4 +265,9 @@ justify-content: space-between !important;
         display: block;
         min-width: 98px;
     }
+}
+
+
+.textred{
+    color: #C5F5FF !important;
 }

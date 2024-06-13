@@ -12,6 +12,7 @@ import {
 	NationalIcon,
 	NovaEngineIcon,
 	PlusIcon,
+	ReaportIcon,
 	SearchIcon,
 	Twitter,
 	VerifiedIcon,
@@ -29,7 +30,7 @@ import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 import { styled } from '@mui/system';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-
+import SpeakerNotesIcon from '@mui/icons-material/SpeakerNotes';
 
 const CustomSelect = styled(Select)(({ theme }) => ({
 	width: '100%',
@@ -80,39 +81,50 @@ const CustomMenuProps = {
 
 const DashboardInDeck = () => {
 
-	const [addmodel, setAddModel] = useState([1])
-console.log(addmodel)
+	const [addmodel, setAddModel] = useState([1]);
+
 	const addModelstest = () => {
-		setAddModel((prev) => {
-			if (prev.length < 4) {
-				const newNumber = prev[prev.length - 1] + 1;
-				return [...prev, newNumber];
-			}
-			return prev;
-		});
+	  setAddModel((prev) => {
+		if (prev.length < 4) {
+		  const newNumber = prev[prev.length - 1] + 1;
+		  return [...prev, newNumber];
+		}
+		return prev;
+	  });
 	};
-
+  
 	const removeModelstest = () => {
-		setAddModel((prev) => {
-			if (prev.length > 1) {
-				return prev.slice(0, -1);
-			}
-			return prev;
-		});
+	  setAddModel((prev) => {
+		if (prev.length > 1) {
+		  return prev.slice(0, -1);
+		}
+		return prev;
+	  });
 	};
-
-
+ 
 	return (
 		<Layout sidebar={<SideBarConponet data={ManukaiSearch} />}>
-			<div className="flex-grow-1 scroll-card-wrapper">
-				<div className={`flex gap-y-5 gap-x-2 flex-col ${addmodel.length === 1 ? "" : "xl:grid xl:grid-cols-2 2xl:grid-cols-4"} `}>
-					{addmodel?.length >1? addmodel.map((_,i)=>(
-					<div key={i}>
-						<HistoryCards removeModelstest={removeModelstest} addModelstest={addModelstest} addmodel={addmodel}/>
-					</div>
-					)):<HistoryCardssignle removeModelstest={removeModelstest} addModelstest={addModelstest} />}
-				</div>
-			</div>
+			 <div className="flex-grow-1 scroll-card-wrapper">
+      <div className={`flex gap-2 ${addmodel?.length === 1 ? 'flex-col gap-y-5' :
+		 `xl:grid xl:grid-cols-2 2xl:grid-cols-${addmodel?.length}`} `}>
+        {addmodel.length > 1 ? (
+          addmodel.map((_, i) => (
+            <div key={i}>
+              <HistoryCards
+                removeModelstest={removeModelstest}
+                addModelstest={addModelstest}
+                addmodel={addmodel}
+              />
+            </div>
+          ))
+        ) : (
+          <HistoryCardssignle
+            removeModelstest={removeModelstest}
+            addModelstest={addModelstest}
+          />
+        )}
+      </div>
+    </div>
 		</Layout>
 	);
 };
@@ -168,13 +180,13 @@ const HistoryCards = ({ addModelstest, removeModelstest, addmodel }) => {
 								<button className="bg-[#4ED2EF] px-1
 								text-[10px] flex items-center h-[22px] gap-1 font-semibold text-black rounded">
 									<i class="bi bi-eye font-bold text-[17pxpx]"></i> Add To Surveillance</button>
-								<div className="border-[1.6px] border-[#4ED2EF] max-h-[20px] rounded-[4px] flex items-center ">
+								{/* <div className="border-[1.6px] border-[#4ED2EF] max-h-[20px] rounded-[4px] flex items-center ">
 									<i class="bi bi-dash cursor-pointer text-white" onClick={removeModelstest}></i>
 									<p className="border-l-[1.5px] border-[#4ED2EF] rounded-full h-[25px]" />
 									<i class="bi bi-plus cursor-pointer text-white" onClick={addModelstest}></i>
-								</div>
-								{/* <AddModelIcon /> */}
-								<MinusIcons />
+								</div> */}
+									<div className="cursor-pointer" onClick={addModelstest}><AddModelIcon/></div>
+									<div className="cursor-pointer"  onClick={removeModelstest}><MinusIcons/></div>
 							</div>
 							<div className="flex items-center gap-2 flex-wrap">
 								<button className="bg-[#4ED2EF] w-fit px-1 flex items-center text-[10px] h-[20px] gap-1 font-semibold text-black rounded">
@@ -347,7 +359,7 @@ const HistoryCardssignle = ({ addModelstest, removeModelstest, addmodel }) => {
 						</div>
 						<div className="flex gap-3">
 							<div>
-						<div className="flex items-center gap-2 w-full border-[1.5px] h-[36px] rounded 	overflow-hidden  border-[#4ED2EF80] pr-3 ">
+						<div className="flex items-center gap-2 w-full lg:w-[347px] border-[1.5px] h-[36px] rounded 	overflow-hidden  border-[#4ED2EF80] pr-3 ">
 									<div onClick={() => setSearchOpen(!searchOpen)}
 										className="w-full p-2 py-3 relative text-[14px] h-full text-[#787878] flex items-center bg-transparent outline-none border-none" >
 										Search
@@ -406,24 +418,24 @@ const HistoryCardssignle = ({ addModelstest, removeModelstest, addmodel }) => {
 									<button className="bg-[#114652] text-[10px] p-1 px-2 rounded-[5px] border-[1px] border-[#4ED2EF]">Hamas <i class="bi bi-x-lg"></i></button>
 								</div>
 							</div>
-							<div className="flex flex-col gap-2">
+							<div className="flex flex-col justify-between gap-2">
 								<div className="flex items-center gap-2 flex-wrap">
-									<button className="bg-[#4ED2EF] px-1
-								text-[10px] flex items-center h-[22px] gap-1 font-semibold text-black rounded">
-										<i class="bi bi-eye font-bold text-[17pxpx]"></i> Add To Surveillance</button>
-									<div className="border-[1.6px] border-[#4ED2EF] max-h-[20px] rounded-[4px] flex items-center ">
-										<i class="bi bi-dash cursor-pointer text-white" onClick={removeModelstest}></i>
+									<button className="bg-[#4ED2EF] px-2
+								text-[13px] flex items-center h-[31px] gap-1 font-semibold text-black rounded">
+										<i class="bi bi-eye font-bold text-[17px]"></i> Add To Surveillance</button>
+									{/* <div className="border-[1.6px] border-[#4ED2EF] max-h-[20px] rounded-[4px] flex items-center ">
+										<i class="bi bi-dash cursor-pointer text-white mt-auto " ></i>
 										<p className="border-l-[1.5px] border-[#4ED2EF] rounded-full h-[25px]" />
-										<i class="bi bi-plus cursor-pointer text-white" onClick={addModelstest}></i>
-									</div>
-									{/* <AddModelIcon /> */}
-									<MinusIcons />
+										<i class="bi bi-plus cursor-pointer text-white mt-auto" ></i>
+									</div> */}
+									<div className="cursor-pointer" onClick={addModelstest}><AddModelIcon/></div>
+									<div className="cursor-pointer"  onClick={removeModelstest}><MinusIcons/></div>
 								</div>
 								<div className="flex items-center gap-2 flex-wrap">
-									<button className="bg-[#4ED2EF] w-fit px-1 flex items-center text-[10px] h-[20px] gap-1 font-semibold text-black rounded">
-										<i class="bi bi-check2 text-[17px] "></i>Translate</button>
-									<button className="bg-[#4ED2EF] w-fit px-1 font-semibold text-black text-[10px] h-[20px] rounded flex items-center gap-1">
-										<i class="bi bi-check2 text-[17px]"></i>Profanity Filter</button>
+									<button className="border-[1px] border-[#4ED2EF] w-fit px-2 flex items-center text-[12px] h-[25px] gap-1 font-semibold text-[#12A5C6]  rounded">
+										<SpeakerNotesIcon style={{fontSize:"13px" ,marginTop:"2px"}}/>Translate</button>
+									<button className="border-[1px] border-[#4ED2EF] w-fit px-2 font-semibold text-[#12A5C6] text-[12px] h-[25px] rounded flex items-center gap-1">
+										<ReaportIcon/> Profanity Filter</button>
 								</div>
 							</div>
 						</div>

@@ -81,7 +81,7 @@ const TopHeader = ({ setSidebarOpen, sidebarOpen, handleTheme, theme }) => {
 					<div className="setIcons">
 
 						<div className="mainnotif relative mt-2">
-							<i className="bi bi-bell text-[22px] mt-2" onClick={() => setShowNotification(!showNotification)}></i>
+							<i className="bi bi-bell text-[30px] mt-2" onClick={() => setShowNotification(!showNotification)}></i>
 							<span className="bell text-[10px]">4</span>
 
 							<div ref={notificationRef} className={`absolute bg-opacity-10 backdrop-blur notishado w-[370px] h-[400px] overflow-y-auto 2xl:h-auto

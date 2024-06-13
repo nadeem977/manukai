@@ -204,7 +204,7 @@ a {
 		max-width:325px;
 		z-index: 99;
 		position: sticky;
-		top: 79px;
+		top: 73px;
 		.sidebar-logo {
 			padding: 12px 32px 12px;
 			img {
@@ -2436,7 +2436,7 @@ body {
 	}
 	left: unset;
 	&.active {
-		left: 9px;
+		left: 15px;
 		&::before {
 			clip-path: polygon(0 100%, 100% 50%, 0 0);
 		}

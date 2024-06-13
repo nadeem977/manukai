@@ -3,8 +3,7 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import { AIcons, IconsRadars, KeyIcons, KysIconsColors, NewsItemsH, PausIcons, SoundIcons } from "./Icon";
 import DeleteSharpIcon from '@mui/icons-material/DeleteSharp';
 import Checkbox from '@mui/material/Checkbox';
-import { styled } from '@material-ui/styles'; 
-import Select from '@mui/material/Select'; 
+import { styled } from '@material-ui/styles';  
 import MuiSelect from './MuiSelect';
 
  
@@ -132,7 +131,8 @@ const ControlPanel = () => {
                         <div className='border-[1px] border-[#4ED2EF80] p-1 rounded min-h-[72px] flex flex-col justify-between gap-1'>
 
                             <div className='flex  gap-3 '>
-                                <div className='flex gap-1 min-w-[60px] max-w-[60px] text-[#3CCF6E] text-[11px]'><KysIconsColors color={"#3CCF6E"} />OK</div>
+                                <div className='flex items-center gap-1 min-w-[60px] max-w-[60px] text-[#3CCF6E] text-[11px]'>
+                                    <KysIconsColors color={"#3CCF6E"} />OK</div>
                                 <div className='text-[#4ED2EF80]'>(“protest” & “demonstration”) + “rally” + “disobedience” + (“public assembly” & (“environment” + “green” + “co2”))</div>
                             </div>
                             <div className='w-full flex justify-end mb-[-8px]'><i class="bi bi-check-lg text-[#3CCF6E] "></i></div>
@@ -148,7 +148,8 @@ const ControlPanel = () => {
 
                         <div className='border-[1px] border-[#4ED2EF80] p-1 rounded min-h-[72px] flex flex-col justify-between gap-1'>
                             <div className='flex gap-3 '>
-                                <div className='flex items-center gap-1 min-w-[60px] max-w-[60px] text-[#D23123] text-[11px]'><KysIconsColors color={"#D23123"} />CRIT</div>
+                                <div className='flex items-center gap-1 min-w-[60px]
+                                 max-w-[60px] text-[#D23123] text-[11px]'><KysIconsColors color={"#D23123"} />CRIT</div>
                                 <div className='text-[#4ED2EF80]'>(“protest” & “demonstration”) </div>
                             </div>
                             <div className='w-full flex items-center justify-end text-[#D23123] mb-[-10px]'><small>Syntax Error</small><i class="bi bi-x text-[18px]"></i></div>

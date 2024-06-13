@@ -136,7 +136,7 @@ const PortfolioRiskScore = () => {
           style={{ marginBottom: "-14px" }}>
           Portfolio Risk Score
         </h6>
-       <div className="w-[68px] h-[19px]">
+       <div className="min-w-[68px] h-[19px]">
        <CustomSelect
       value={age}
       onChange={handleChange}

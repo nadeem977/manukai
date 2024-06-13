@@ -5,58 +5,57 @@ import Select from '@mui/material/Select';
 import { styled } from '@mui/system';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
-
 const CustomSelect = styled(Select)(({ theme }) => ({
 	width: '100%',
 	backgroundColor: '#6E6E6E1A',
 	border: 'none',
 	outline: 'none',
 	color: 'white',
-  fontSize:"12px",
-	borderRadius: '2px', 
+	fontSize: "12px",
+	borderRadius: '2px',
 	'& .MuiSelect-select': {
-	  paddingRight: '10px', 
-	  padding: '6px 10px',
+		paddingRight: '10px',
+		padding: '6px 10px',
 	},
 	'& .MuiSelect-icon': {
-	  color: '#3CCCEC',
-    width:"10px",
+		color: '#3CCCEC',
+		width: "10px",
 	},
 	'& .MuiInputBase-input': {
-	  color: 'white',
+		color: 'white',
 	},
 	'&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-	  border: 'none',
+		border: 'none',
 	},
 	'&:hover .MuiOutlinedInput-notchedOutline': {
-	  border: 'none',
+		border: 'none',
 	},
 	'& .MuiOutlinedInput-notchedOutline': {
-	  border: 'none',
+		border: 'none',
 	},
-  '& .css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input':{
-     paddingRight: '10px',
-     fontSize:"12px",
-  }
-  }));
+	'& .css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input': {
+		paddingRight: '10px',
+		fontSize: "12px",
+	}
+}));
 
-  const CustomMenuProps = {
+const CustomMenuProps = {
 	PaperProps: {
-	  style: {
-		backgroundColor: 'transparent',
-		borderRadius: '10px',
-		color:"white",
-		backdropFilter:"blur(20px)"
-	  },
+		style: {
+			backgroundColor: 'transparent',
+			borderRadius: '10px',
+			color: "white",
+			backdropFilter: "blur(20px)"
+		},
 	},
 };
-
 
 const series = [
 	{
 		data: [0, 30, 50, 80, 50, 30, 0],
 	},
 ];
+
 const options = {
 	chart: {
 		height: 170,
@@ -112,12 +111,48 @@ const options = {
 			},
 		},
 	},
+	tooltip: {
+		enabled: true,
+		theme: 'dark',
+		style: {
+			fontSize: '12px',
+		},
+		y: {
+			formatter: function (val) {
+				return `Value: ${val}`;
+			}
+		},
+		marker: {
+			show: true,
+		},
+	},
+	annotations: {
+		points: [{
+			x: new Date().getTime(),
+			y: 80,
+			marker: {
+				size: 8,
+				fillColor: "#fff",
+				strokeColor: "#2698FF",
+				radius: 2,
+			},
+			label: {
+				borderColor: "#2698FF",
+				offsetY: 0,
+				style: {
+					color: "#fff",
+					background: "#2698FF",
+				},
+				text: 'NOW',
+			}
+		}]
+	},
 };
-const ContexualScore = () => {
 
+const ContexualScore = () => {
 	const [age, setAge] = React.useState('');
 	const handleChange = (event) => {
-	  setAge(event.target.value);
+		setAge(event.target.value);
 	};
 
 	return (
@@ -129,7 +164,7 @@ const ContexualScore = () => {
 				>
 					Contextual Score
 				</h6>
-				<div className="w-[94px] h-[19px]">
+				<div className="min-w-[94px] h-[19px]">
 					<CustomSelect
 						value={age}
 						onChange={handleChange}
@@ -138,7 +173,7 @@ const ContexualScore = () => {
 						IconComponent={KeyboardArrowDownIcon}
 						MenuProps={CustomMenuProps}  >
 						<MenuItem value="">
-						Portfolio 3y 
+							Portfolio 3y
 						</MenuItem>
 						<MenuItem value={10}>7 Day</MenuItem>
 						<MenuItem value={20}>10 Day</MenuItem>

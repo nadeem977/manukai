@@ -31,10 +31,10 @@ function App() {
             <Route path="/cyberspace" element={<CyberSpacePage />} />
             <Route path="/*" element={<DashboardInData />} />
             <Route path="/Login" element={<Login/>}/>
-            <Route path="/ManukaiGPT" element={<ManukaiGPT/>}/>
+            <Route path="/int-deck/ManukaiGPT" element={<ManukaiGPT/>}/>
             <Route path="/ManukaiGPT/*" element={<ManukaiGPT/>}/>
             <Route path="/Register" element={<Register/>}/>
-            <Route path="/Surveillance" element={<Surveillance/>}/>
+            <Route path="/int-deck/Surveillance" element={<Surveillance/>}/>
             <Route path="/Surveillance/*" element={<Surveillance/>}/>
             <Route path="/CreateAccount" element={<CreateAccount/>}/>
           </Routes> 
