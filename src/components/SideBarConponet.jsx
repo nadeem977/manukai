@@ -6,6 +6,8 @@ import MuiAccordion from '@mui/material/Accordion';
 import MuiAccordionSummary from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import { Link, useLocation } from "react-router-dom";
+import Dropdown from 'react-bootstrap/Dropdown';
+
 
 const stylesummry = {
   borderRadius: "10px",
@@ -79,7 +81,7 @@ const SideBarComponent = ({ data }) => {
                 expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: '0.9rem', color: 'white' }} />}
                 aria-controls={`panel${i}-content`}
                 id={`panel${i}-header`}
-                style={{ ...stylesummry, background: item.icon2 ? "#0f2128" : item?.bg ,color:item.icon2 ?"white":"#C5F5FF" }}>
+                style={{ ...stylesummry, background: item.icon2 ? "#0f2128" : item?.bg, color: item.icon2 ? "white" : "#C5F5FF" }}>
                 <div className="flex items-center gap-3 w-full text-[16px] pr-3">
                   {item.icon} {item.title} {item.icon2 || item?.icon3}
                 </div>
@@ -88,11 +90,18 @@ const SideBarComponent = ({ data }) => {
                 <ul className="submenu">
                   {item.submenu.map((subItem, inx) => (
                     <li key={inx}>
-                      <Link
-                        to={subItem.url}
-                        className={`btns ${location === subItem.url ? "bg-[#0f2128] text-white" : "textred"}`}>
-                        {subItem.title} {subItem.icon2}
-                      </Link>
+                      <div className={`chamkila btn overflow-visible   ${location === subItem.url ? "bg-[#0f2128] text-white" : "textred"}`}>
+                        <Link to={subItem.url} className="bg-red-500 w-full h-full p-[10px]">{subItem.title}</Link>
+                        <Dropdown>
+                          <Dropdown.Toggle variant="success" id="dropdown-basic">
+                          <i class="bi bi-three-dots-vertical"></i>
+                          </Dropdown.Toggle>
+                          <Dropdown.Menu className="top-[-50px] p-0">
+                            <Dropdown.Item href="#/action-1">Rename</Dropdown.Item>
+                            <Dropdown.Item href="#/action-2">Delete</Dropdown.Item> 
+                          </Dropdown.Menu>
+                        </Dropdown>
+                      </div>
                     </li>
                   ))}
                 </ul>

@@ -39,11 +39,11 @@
     top: 4px;
     left: 15px;
     background-color: #EC9121;
-    padding: 0px 5px; 
+    padding: 0px 5px;
     border-radius: 50%;
 }
 
-.mainnotif .bi { 
+.mainnotif .bi {
     cursor: pointer;
 }
 
@@ -79,13 +79,16 @@ select .options:focus {
     padding-left: 4px !important;
     text-transform: capitalize !important;
 }
-.mainChecks{
+
+.mainChecks {
     margin-left: 1rem;
 }
-.mainChecks .form-check .form-check-input{
- width: 13px;
- height: 13px;
+
+.mainChecks .form-check .form-check-input {
+    width: 13px;
+    height: 13px;
 }
+
 .selection option {
     color: black;
 }
@@ -151,77 +154,92 @@ select .options:focus {
     letter-spacing: 0.15em;
     color: #12A5C6;
 }
-.shadoBax{
+
+.shadoBax {
     box-shadow: 0px 4px 14px 0px #17CDFB30;
 }
-.selectoptions:focus{
+
+.selectoptions:focus {
     box-shadow: none;
     outline: 0;
 }
-.selectoptions::after{
+
+.selectoptions::after {
     color: white !important;
     background-color: white !important;
 }
-.form-select:focus{
-    border:1px solid #12A5C6;
+
+.form-select:focus {
+    border: 1px solid #12A5C6;
 }
 
-.form-select{
+.form-select {
     background-image: url("./assets/img/aro.png");
 }
-.tracking{
+
+.tracking {
     transition: all 0.4s;
 }
 
 .textshblack {
     text-shadow: 0px 0px 3px 0px #000000CC !important;
- }
-.notishado{
+}
+
+.notishado {
     box-shadow: 0px 4px 14px 0px #17CDFB30;
 }
-.noticbtn{
+
+.noticbtn {
     position: relative;
     background: none;
     border: none;
     cursor: pointer;
     outline: none;
 }
-.active{
+
+.active {
     color: #2CCAF0;
 }
+
 .noticbtn.active::after {
     content: '';
     position: absolute;
     left: 0;
-    bottom: -9px; /* Adjust to place the line right under the button */
+    bottom: -9px;
+    /* Adjust to place the line right under the button */
     width: 100%;
-    height: 2px; /* Thickness of the line */
-    background-color: #2CCAF0; /* Color of the line */
+    height: 2px;
+    /* Thickness of the line */
+    background-color: #2CCAF0;
+    /* Color of the line */
     animation: slideIn 0.3s ease-out;
-  }
-  
-  @keyframes slideIn {
+}
+
+@keyframes slideIn {
     from {
-      width: 0;
+        width: 0;
     }
+
     to {
-      width: 100%;
+        width: 100%;
     }
-  }
-
-
-.manikaiGpth{
-height: calc(100vh - 208px);
-padding-bottom: 1rem;
 }
-.manikaigraphH{
+
+
+.manikaiGpth {
+    height: calc(100vh - 208px);
+    padding-bottom: 1rem;
+}
+
+.manikaigraphH {
     height: calc(100vh - 180px);
-    padding-bottom: 1rem;   
+    padding-bottom: 1rem;
 }
+
 .add-new-graph-button {
     display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
     border: 2px dashed #11333b;
     border-radius: 5px;
     background-color: #0f2128;
@@ -230,19 +248,19 @@ padding-bottom: 1rem;
     cursor: pointer;
     width: 100%;
     transition: background-color 0.3s ease, border-color 0.3s ease;
-  }
- 
-
-  .charclass .apexcharts-legend{
-display: flex  !important;
-flex-direction: column !important; 
-justify-content: space-between !important;
-  }
+}
 
 
- .btns{
+.charclass .apexcharts-legend {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+}
+
+
+.btns {
     width: 100%;
-    padding: 10px;
+    /* padding: 10px; */
     /* background-color: #0f2128; */
     border-radius: 10px;
     margin-top: 5px;
@@ -250,24 +268,43 @@ justify-content: space-between !important;
     align-items: center;
     color: #C5F5FF;
     justify-content: space-between;
- }
+}
 
-.notifcationbelslable label{
+.notifcationbelslable label {
     padding-top: 0px !important;
 }
-.lastBag label{
+
+.lastBag label {
     padding-left: 0px !important;
 }
 
 
-@media (max-width:800px) {
-    .header-logo {
-        display: block;
-        min-width: 98px;
-    }
+
+
+
+.textred {
+    color: #C5F5FF !important;
 }
 
 
-.textred{
-    color: #C5F5FF !important;
+@media (max-width:1100px) {
+    .sidebar {
+        max-width: 270px !important;
+    }
+
+    .header-logo {
+        min-width:262px;
+    }
+}
+
+@media (max-width:800px) {
+    .header-logo { 
+        min-width: 98px;
+    }
+}
+@media (min-width: 1450px) {
+    .header-tabs-group a {
+        width: 214px;
+        height: 85px;
+    }
 }

@@ -82,7 +82,7 @@ const CustomMenuProps = {
 const DashboardInDeck = () => {
 
 	const [addmodel, setAddModel] = useState([1]);
-
+    const [boxlength ,setBoxLength] = useState(2)
 	const addModelstest = () => {
 	  setAddModel((prev) => {
 		if (prev.length < 4) {
@@ -101,12 +101,14 @@ const DashboardInDeck = () => {
 		return prev;
 	  });
 	};
- 
+ useEffect(()=>{
+	setBoxLength(addmodel?.length)
+ },[addmodel])
 	return (
 		<Layout sidebar={<SideBarConponet data={ManukaiSearch} />}>
 			 <div className="flex-grow-1 scroll-card-wrapper">
-      <div className={`flex gap-2 ${addmodel?.length === 1 ? 'flex-col gap-y-5' :
-		 `xl:grid xl:grid-cols-2 2xl:grid-cols-${addmodel?.length}`} `}>
+      <div className={`flex gap-2 ${boxlength === 1 ? 'flex-col gap-y-5' : `xl:grid xl:grid-cols-2 2xl:grid-cols-${boxlength}`}`}>
+
         {addmodel.length > 1 ? (
           addmodel.map((_, i) => (
             <div key={i}>

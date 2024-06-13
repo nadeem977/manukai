@@ -15,6 +15,7 @@ import RemoveSharpIcon from '@mui/icons-material/RemoveSharp';
 import {
 	AngleDown2,
 	AngleUp2,
+	PlusBorderIcon,
 	PlusRoundIcon,
 	ZoomIn,
 	ZoomOut,
@@ -420,16 +421,17 @@ const DashboardMayView = () => {
 												<h5 className='text-[12px] uppercase'>{popupInfo.name}</h5>
 											</div>
 											<div className='iconsflex gap-2'>
-												{isPopupExpanded ? <div className='flex  items-center gap-2 border-[2px] bg-[#114652] border-[#4ED2EF] p-1 px-2 rounded '>
+												{isPopupExpanded ? 
+												<div className='flex  items-center gap-1 border-[2px]
+												 bg-[#114652] border-[#4ED2EF] p-1 px-2 rounded  h-[27px]'>
 													<div className='flex items-center gap-1'>
-														<WorkIcon style={{ fontSize: "17px" }} />
-														<p className='text-base text-white font-bold'>1</p></div>
-													<div className='border-[2px] rounded px-1 border-[#4ED2EF] cursor-pointer'>
-														<AddIcon style={{ fontSize: "15px" }} /></div>
+														<WorkIcon style={{ fontSize: "15px" }} />
+														<p className='text-white text-[12px] mt-1 font-bold'>1</p></div>
+													<PlusRoundIcon/>
 												</div> :
 													<div className={`badge text-[10px] leading-[12px] p-1`} style={{ background: `${bgColor2}` }}> {popupInfo?.score}</div>}
 
-												<div className='m-0 relative' onClick={() => setShowBellNotifcation(true)}><i className="bi bi-bell text-[#4ED2EF] cursor-pointer text-[18px]"></i>
+												<div className='m-0 relative' onClick={() => setShowBellNotifcation(true)}><i className="bi bi-bell text-[#4ED2EF] mt-1 cursor-pointer text-[20px]"></i>
 
 													<div className={`absolute  bg-[#03191E4D] bg-opacity-10 backdrop-blur notishado ${showBellNotifcation ? "block" : 'hidden'}
 													 right-60 top-[-50%] w-[452px]  h-[424px] border-[1px] border-[#4ED2EF80] rounded-[16px]`}>
@@ -494,7 +496,7 @@ const DashboardMayView = () => {
 
 
 												</div>
-												<div className='border-[2px] h-[15px] flex items-center justify-center rounded border-[#4ED2EF] cursor-pointer'
+												<div className='border-[2px] h-[20px] flex items-center justify-center rounded border-[#4ED2EF] cursor-pointer'
 													onClick={() => setState(prevState => ({ ...prevState, popupInfo: null, isPopupExpanded: false }))}>
 													<RemoveSharpIcon  />
 													</div>

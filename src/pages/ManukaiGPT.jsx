@@ -124,8 +124,7 @@ const ManukaiGPT = () => {
                                 aria-controls={open ? 'long-menu' : undefined}
                                 aria-expanded={open ? 'true' : undefined}
                                 aria-haspopup="true"
-                                onClick={handleClick}
-                              >
+                                onClick={handleClick}>
                                 <MoreVertIcon style={{color:"#FFFFFF70"}}  />
                               </IconButton>
                               <Menu
