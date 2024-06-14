@@ -15,20 +15,12 @@ import MenuItem from '@mui/material/MenuItem';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { ChatINTELLIGENCESidebAr } from '../assets/data/data'
 const options = [
-  'None',
   'Atria',
   'Callisto',
   'Dione',
   'Ganymede',
   'Hangouts Call',
-  'Luna',
-  'Oberon',
-  'Phobos',
-  'Pyxis',
-  'Sedna',
-  'Titania',
-  'Triton',
-  'Umbriel',
+
 ];
 const ITEM_HEIGHT = 48;
 const ManukaiGPT = () => {
@@ -124,8 +116,7 @@ const ManukaiGPT = () => {
                                 aria-controls={open ? 'long-menu' : undefined}
                                 aria-expanded={open ? 'true' : undefined}
                                 aria-haspopup="true"
-                                onClick={handleClick}
-                              >
+                                onClick={handleClick}>
                                 <MoreVertIcon style={{color:"#FFFFFF70"}}  />
                               </IconButton>
                               <Menu
@@ -210,10 +201,7 @@ const ManukaiGPT = () => {
 
                       </div>
                     </div>
-                  </div>
-
-
-
+                  </div> 
                 </div>
               </div>
 

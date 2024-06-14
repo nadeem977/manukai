@@ -251,144 +251,10 @@ export const statistics = [
 		score: 40,
 	},
 ];
-
-const manukaidatamenu3 = [
-	{
-		title: "RISK SCORES",
-		icon: <Invalid />,
-		url: "/dashboard/risk-scores",
-		riskstatus: "risk-status",
-	},
-	{
-		title: "Nova Engine",
-		icon: <NovaEngineIcon />,
-		url: "/dashboard/nova-engine",
-		submenu: [
-			{
-				title: "News Coverage",
-				url: "/dashboard/nova-engine/news-coverage",
-			},
-			{
-				title: "Social Media",
-				url: "/dashboard/nova-engine/social-media",
-			},
-			{
-				title: "Dark Web",
-				url: "/dashboard/nova-engine/dark-web",
-			},
-		],
-	},
-	{
-		title: "National",
-		icon: <NationalIcon />,
-		url: "/dashboard/national",
-		submenu: [
-			{
-				title: "National Submenu 1",
-				url: "/dashboard/national/news-coverage",
-			},
-		],
-	},
-	{
-		title: "International",
-		icon: <InternationalIcon />,
-		url: "/international",
-	},
-];
-const warStatusData2 = [
-	{
-		name: "Israel-Hamas",
-		subtitle: "Asymmetric Warfare",
-		score: "8.4",
-		img: "/img/flags/israel.png",
-		map: "/img/hitmap/1.png",
-		color: "#FF1717",
-	},
-	{
-		name: "US Outpost Yemen",
-		subtitle: "Proxy Warfare",
-		score: "6.4",
-		img: "/img/flags/yemen.png",
-		map: "/img/hitmap/2.png",
-		color: "#FF5D17",
-	},
-	{
-		name: "Ukrainian War",
-		subtitle: "Hybrid Warfare",
-		score: "8.1",
-		img: "/img/flags/ukrain2.png",
-		map: "/img/hitmap/3.png",
-		color: "#FF1717",
-	},
-	{
-		name: "Farmer Protests",
-		subtitle: "Political Frictions",
-		score: "5.3",
-		img: "/img/flags/farmer.png",
-		map: "/img/hitmap/4.png",
-		color: "#FFDA17",
-	},
-];
-const statistics2 = [
-	{
-		name: "Israel-Hamas",
-		img: "/img/flags/israel.png",
-		color: "#FF1717",
-		score: 84,
-	},
-	{
-		name: "Ukrainian War",
-		img: "/img/flags/ukrain2.png",
-		color: "#FF1717",
-		score: 50,
-	},
-	{
-		name: "US Outpost Yemen",
-		img: "/img/flags/yemen.png",
-		color: "#FF5D17",
-		score: 50,
-	},
-	{
-		name: "Farmer Protests",
-		img: "/img/flags/farmer.png",
-		color: "#FFDA17",
-		score: 40,
-	},
-];
-
+ 
 
  
 export const ManukaiSearch = [
-
-	{
-		title: "Manukai Search",
-		icon: <NovaEngineIcon />,
-		url: "/int-deck",
-		icon2: <Check />,
-		submenu: [
-			{
-				title: "New Search",
-				url: "/int-deck",
-				icon2: <EditIcons />,
-			},
-			{
-				title: "Intelligence Preset 1",
-				url: "/int-deck/deck3",
-				icon2: <i class="bi bi-three-dots-vertical"></i>,
-			},
-			{
-				title: "Intelligence Preset 1",
-				url: "/int-deck/deck2",
-				icon2: <i class="bi bi-three-dots-vertical"></i>,
-			},
-			{
-				title: "Intelligence Preset 1",
-				url: "/int-deck/deck",
-				icon2: <i class="bi bi-three-dots-vertical"></i>,
-			},
-
-		],
-	},
 	{
 		title: "ManukaiGPT",
 		icon: <ChatBubbleOutlineIcon style={{color:"#C5F5FF"}} />,
@@ -416,22 +282,37 @@ export const ManukaiSearch = [
 		],
 	},
 	{
-		title: "Map Intelligence",
-		icon: <NationalIcon color="#C5F5FF"/>,
-		icon3: <Beta />,
-		bg:"#0e2b34",
+		title: "Manukai Search",
+		icon: <NovaEngineIcon />,
+		url: "/int-deck",
+		icon2: <Check />,
 		submenu: [
 			{
-				title: "Sandbox",
-				url: "/int-deck/sandbox",
-				tweakText: <MoreVertIcon />
+				title: "New Search",
+				url: "/int-deck",
+				// icon2: <EditIcons />,
+			},
+			{
+				title: "Intelligence Preset 1",
+				url: "/int-deck/deck3",
+				icon2: <i class="bi bi-three-dots-vertical"></i>,
+			},
+			{
+				title: "Intelligence Preset 1",
+				url: "/int-deck/deck2",
+				icon2: <i class="bi bi-three-dots-vertical"></i>,
+			},
+			{
+				title: "Intelligence Preset 1",
+				url: "/int-deck/deck",
+				icon2: <i class="bi bi-three-dots-vertical"></i>,
 			},
 
 		],
 	},
 	{
 		title: "Surveillance",
-		icon: <i class="bi bi-eye text-[16px] text-[#C5F5FF]"></i>,
+		icon: <i class="bi bi-eye ml-1 text-[16px] text-[#C5F5FF]"></i>,
 		bg:"#0e2b34",
 		submenu: [
 			{
@@ -475,9 +356,77 @@ export const ManukaiSearch = [
 			},
 		],
 	},
+	{
+		title: "Map Intelligence",
+		icon: <NationalIcon color="#C5F5FF"/>,
+		icon3: <Beta />,
+		bg:"#0e2b34",
+		submenu: [
+			{
+				title: "Sandbox",
+				url: "/int-deck/sandbox",
+				tweakText: <MoreVertIcon />
+			},
+
+		],
+	},
+
 	 
 ];
 export const INTELLIGENCESidebAr = [
+	{
+		title: "ManukaiGPT",
+		icon: <ChatBubbleOutlineIcon style={{color:"#C5F5FF"}}/>,
+		bg:"#0e2b34",
+		submenu: [
+			{
+				title: "New Chat",
+				url: "/int-deck/ManukaiGPT",
+				icon2:<i class="bi bi-three-dots-vertical"></i>,
+			},
+			{
+				title: 'Bali Airport',
+				url: "/int-deck/ManukaiGPT/2",
+				bg: "#00E0FF33",
+				icon2: <i class="bi bi-three-dots-vertical"></i>
+			},
+			{
+				title: 'Amsterdam CS',
+				url: "/int-deck/ManukaiGPT/3",
+				bg: "#00E0FF33",
+				icon2: <i class="bi bi-three-dots-vertical"></i>
+			},
+
+		],
+	},
+	{
+		title: "Manukai Search",
+		icon: <NovaEngineIcon color="#C5F5FF"/>,
+		bg:"#0e2b34",
+		submenu: [
+			{
+				title: "New Search",
+				url: "/int-deck",
+				icon2: <i class="bi bi-three-dots-vertical"></i>,
+			},
+			{
+				title: "Intelligence Preset 1",
+				url: "/int-deck/deck3",
+				icon2: <i class="bi bi-three-dots-vertical"></i>,
+			},
+			{
+				title: "Intelligence Preset 1",
+				url: "/int-deck/deck2",
+				icon2: <i class="bi bi-three-dots-vertical"></i>,
+			},
+			{
+				title: "Intelligence Preset 1",
+				url: "/int-deck/deck",
+				icon2: <i class="bi bi-three-dots-vertical"></i>,
+			},
+
+		],
+	},
 	{
 		title: "Surveillance",
 		icon: <i class="bi bi-eye text-[16px] ml-1"></i>,
@@ -539,59 +488,8 @@ export const INTELLIGENCESidebAr = [
 
 		],
 	},
-	{
-		title: "ManukaiGPT",
-		icon: <ChatBubbleOutlineIcon style={{color:"#C5F5FF"}}/>,
-		bg:"#0e2b34",
-		submenu: [
-			{
-				title: "New Chat",
-				url: "/int-deck/ManukaiGPT",
-				icon2:<i class="bi bi-three-dots-vertical"></i>,
-			},
-			{
-				title: 'Bali Airport',
-				url: "/int-deck/ManukaiGPT/2",
-				bg: "#00E0FF33",
-				icon2: <i class="bi bi-three-dots-vertical"></i>
-			},
-			{
-				title: 'Amsterdam CS',
-				url: "/int-deck/ManukaiGPT/3",
-				bg: "#00E0FF33",
-				icon2: <i class="bi bi-three-dots-vertical"></i>
-			},
+	
 
-		],
-	},
-	{
-		title: "Manukai Search",
-		icon: <NovaEngineIcon color="#C5F5FF"/>,
-		bg:"#0e2b34",
-		submenu: [
-			{
-				title: "New Search",
-				url: "/int-deck",
-				icon2: <i class="bi bi-three-dots-vertical"></i>,
-			},
-			{
-				title: "Intelligence Preset 1",
-				url: "/int-deck/deck3",
-				icon2: <i class="bi bi-three-dots-vertical"></i>,
-			},
-			{
-				title: "Intelligence Preset 1",
-				url: "/int-deck/deck2",
-				icon2: <i class="bi bi-three-dots-vertical"></i>,
-			},
-			{
-				title: "Intelligence Preset 1",
-				url: "/int-deck/deck",
-				icon2: <i class="bi bi-three-dots-vertical"></i>,
-			},
-
-		],
-	},
 ];
 export const ChatINTELLIGENCESidebAr = [
 	{
@@ -621,22 +519,36 @@ export const ChatINTELLIGENCESidebAr = [
 		],
 	},
 	{
-		title: "Map Intelligence",
-		icon: <NationalIcon color="#C5F5FF"/>,
-		icon3: <Beta />,
+		title: "Manukai Search",
+		icon: <NovaEngineIcon color="#C5F5FF" />,
 		bg:"#0e2b34",
 		submenu: [
 			{
-				title: "Sandbox",
-				url: "/int-deck/sandbox",
-				tweakText: <MoreVertIcon />
+				title: "New Search",
+				url: "/int-deck",
+				icon2:<i class="bi bi-three-dots-vertical"></i>,
+			},
+			{
+				title: "Intelligence Preset 1",
+				// url: "/int-deck/deck3",
+				icon2: <i class="bi bi-three-dots-vertical"></i>,
+			},
+			{
+				title: "Intelligence Preset 1",
+				// url: "/int-deck/deck2",
+				icon2: <i class="bi bi-three-dots-vertical"></i>,
+			},
+			{
+				title: "Intelligence Preset 1",
+				url: "/int-deck/deck",
+				icon2: <i class="bi bi-three-dots-vertical"></i>,
 			},
 
 		],
 	},
 	{
 		title: "Surveillance",
-		icon: <i class="bi bi-eye text-[16px] text-[#C5F5FF]"></i>,
+		icon: <i class="bi bi-eye ml-1 text-[16px] text-[#C5F5FF]"></i>,
 		bg:"#0e2b34",
 		url: "/int-deck/Surveillance",
 		submenu: [
@@ -682,33 +594,22 @@ export const ChatINTELLIGENCESidebAr = [
 		],
 	},
 	{
-		title: "Manukai Search",
-		icon: <NovaEngineIcon color="#C5F5FF" />,
+		title: "Map Intelligence",
+		icon: <NationalIcon color="#C5F5FF"/>,
+		icon3: <Beta />,
 		bg:"#0e2b34",
 		submenu: [
 			{
-				title: "New Search",
-				url: "/int-deck",
-				icon2:<i class="bi bi-three-dots-vertical"></i>,
+				title: "Sandbox",
+				url: "/int-deck/sandbox",
+				tweakText: <MoreVertIcon />
 			},
-			{
-				title: "Intelligence Preset 1",
-				// url: "/int-deck/deck3",
-				icon2: <i class="bi bi-three-dots-vertical"></i>,
-			},
-			{
-				title: "Intelligence Preset 1",
-				// url: "/int-deck/deck2",
-				icon2: <i class="bi bi-three-dots-vertical"></i>,
-			},
-			{
-				title: "Intelligence Preset 1",
-				url: "/int-deck/deck",
-				icon2: <i class="bi bi-three-dots-vertical"></i>,
-			},
+		
 
 		],
 	},
+
+
 ];
 
 
