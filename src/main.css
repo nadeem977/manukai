@@ -269,7 +269,49 @@ select .options:focus {
     color: #C5F5FF;
     justify-content: space-between;
 }
+.sideDropdown .dropdown-toggle::after{
+    display:none;
+}
+.sideDropdown .dropdown-toggle{
+    padding: 0px;
+    background: transparent;
+    border: none;
+}
+.dropdown-toggle:hover{
+    background-color: transparent;
+    border: none;
+    outline: 0;
+}
+.dropdown-toggle:focus{
+    box-shadow: none;
+    outline: 0;
+}
 
+.sideDropdown .btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active{
+    background-color: transparent;
+    border: none;
+    outline: 0;
+}
+.dropdown-menu {
+    font-size: 14px;
+    border: none;
+    background-color: rgba(28, 158, 187, 0.192);
+    backdrop-filter: blur(20px);
+}
+.dropdown-menu :hover{
+   background-color: #0f212852;
+    color: white;
+    border-radius: 5px;
+}
+.sideDropdown .dropdown-toggle:active{
+    background-color: transparent;
+    border: none;
+    outline: 0;
+}
+
+.chamkila{
+    padding: 0px;
+}
 .notifcationbelslable label {
     padding-top: 0px !important;
 }
@@ -289,7 +331,7 @@ select .options:focus {
 
 @media (max-width:1100px) {
     .sidebar {
-        max-width: 270px !important;
+        max-width: 300px !important;
     }
 
     .header-logo {
@@ -306,5 +348,10 @@ select .options:focus {
     .header-tabs-group a {
         width: 214px;
         height: 85px;
+    }
+}
+@media (max-width:1000px) {
+    .sidebar {
+        max-width: 330px !important;
     }
 }

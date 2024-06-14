@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect,useState } from "react";
 import { SidebarCollapseItem } from "../pages/DashboardInData";
 import { styled } from '@mui/material/styles';
 import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
@@ -48,9 +48,12 @@ const AccordionSummary = styled((props) => (
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({}));
 
 const SideBarComponent = ({ data }) => {
+
+
   const location = useLocation().pathname;
   const [expanded, setExpanded] = React.useState(false);
-
+  const [editname ,setEditName] = useState("")
+  // const[newChat, setNewChat] =useState(["1","2","3","4"])
   useEffect(() => {
     const panelToExpand = data.find((item, index) => {
       return item.submenu.some(subItem => subItem.url === location);
@@ -67,6 +70,13 @@ const SideBarComponent = ({ data }) => {
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
   };
+   
+  const handelrename = (event)=>{
+    if(event.key === "Enter"){
+      setEditName("") 
+    }
+  }
+
 
   return (
     <>
@@ -90,22 +100,25 @@ const SideBarComponent = ({ data }) => {
                 <ul className="submenu">
                   {item.submenu.map((subItem, inx) => (
                     <li key={inx}>
-                      <div className={`chamkila btn overflow-visible   ${location === subItem.url ? "bg-[#0f2128] text-white" : "textred"}`}>
-                        <Link to={subItem.url} className="bg-red-500 w-full h-full p-[10px]">{subItem.title}</Link>
+                      <div className={`chamkila overflow-visible   ${location === subItem.url ? "bg-[#0f2128] text-white" : "textred"}`}>
+                   {editname === inx ? <input type="text" className="p-1 my-2 w-full bg-[#4ED2EF80] text-black  border-none" onKeyDown={handelrename}/>:
+                   <Link to={subItem.url} className="w-full h-full p-[10px] hover:text-white">{subItem.title}</Link>}
+                      {location === subItem.url ?  <div className="sideDropdown"> 
                         <Dropdown>
                           <Dropdown.Toggle variant="success" id="dropdown-basic">
                           <i class="bi bi-three-dots-vertical"></i>
                           </Dropdown.Toggle>
                           <Dropdown.Menu className="top-[-50px] p-0">
-                            <Dropdown.Item href="#/action-1">Rename</Dropdown.Item>
-                            <Dropdown.Item href="#/action-2">Delete</Dropdown.Item> 
+                            <Dropdown.Item onClick={()=>setEditName(inx)}>Rename</Dropdown.Item>
+                            <Dropdown.Item>Delete</Dropdown.Item> 
                           </Dropdown.Menu>
                         </Dropdown>
+                        </div>:<p>{subItem?.icon2}</p>}
                       </div>
                     </li>
                   ))}
                 </ul>
-              </AccordionDetails>
+              </AccordionDetails>  
             </Accordion>
           ))}
         </ul>

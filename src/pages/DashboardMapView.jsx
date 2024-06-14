@@ -431,7 +431,8 @@ const DashboardMayView = () => {
 												</div> :
 													<div className={`badge text-[10px] leading-[12px] p-1`} style={{ background: `${bgColor2}` }}> {popupInfo?.score}</div>}
 
-												<div className='m-0 relative' onClick={() => setShowBellNotifcation(true)}><i className="bi bi-bell text-[#4ED2EF] mt-1 cursor-pointer text-[20px]"></i>
+												<div className='mt-1 relative' onClick={() => setShowBellNotifcation(true)}>
+													<i className="bi bi-bell text-[#4ED2EF] cursor-pointer text-[20px]"></i>
 
 													<div className={`absolute  bg-[#03191E4D] bg-opacity-10 backdrop-blur notishado ${showBellNotifcation ? "block" : 'hidden'}
 													 right-60 top-[-50%] w-[452px]  h-[424px] border-[1px] border-[#4ED2EF80] rounded-[16px]`}>

@@ -2081,7 +2081,7 @@ body {
 		align-items: center;
 		gap: 12px;
 		border-radius: 8px;
-		padding: 10px;
+		padding:0 10px;
 		border-radius: 12px;
 		font-size: 14px;
 		font-weight: 600; 
@@ -2102,6 +2102,7 @@ body {
 		flex-direction: column;
 		gap: 8px;
 		margin-top: 8px;
+		min-height: 100px;
 		.chamkila {
 			border-radius: 8px;
 		}

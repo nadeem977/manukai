@@ -251,111 +251,7 @@ export const statistics = [
 		score: 40,
 	},
 ];
-
-const manukaidatamenu3 = [
-	{
-		title: "RISK SCORES",
-		icon: <Invalid />,
-		url: "/dashboard/risk-scores",
-		riskstatus: "risk-status",
-	},
-	{
-		title: "Nova Engine",
-		icon: <NovaEngineIcon />,
-		url: "/dashboard/nova-engine",
-		submenu: [
-			{
-				title: "News Coverage",
-				url: "/dashboard/nova-engine/news-coverage",
-			},
-			{
-				title: "Social Media",
-				url: "/dashboard/nova-engine/social-media",
-			},
-			{
-				title: "Dark Web",
-				url: "/dashboard/nova-engine/dark-web",
-			},
-		],
-	},
-	{
-		title: "National",
-		icon: <NationalIcon />,
-		url: "/dashboard/national",
-		submenu: [
-			{
-				title: "National Submenu 1",
-				url: "/dashboard/national/news-coverage",
-			},
-		],
-	},
-	{
-		title: "International",
-		icon: <InternationalIcon />,
-		url: "/international",
-	},
-];
-const warStatusData2 = [
-	{
-		name: "Israel-Hamas",
-		subtitle: "Asymmetric Warfare",
-		score: "8.4",
-		img: "/img/flags/israel.png",
-		map: "/img/hitmap/1.png",
-		color: "#FF1717",
-	},
-	{
-		name: "US Outpost Yemen",
-		subtitle: "Proxy Warfare",
-		score: "6.4",
-		img: "/img/flags/yemen.png",
-		map: "/img/hitmap/2.png",
-		color: "#FF5D17",
-	},
-	{
-		name: "Ukrainian War",
-		subtitle: "Hybrid Warfare",
-		score: "8.1",
-		img: "/img/flags/ukrain2.png",
-		map: "/img/hitmap/3.png",
-		color: "#FF1717",
-	},
-	{
-		name: "Farmer Protests",
-		subtitle: "Political Frictions",
-		score: "5.3",
-		img: "/img/flags/farmer.png",
-		map: "/img/hitmap/4.png",
-		color: "#FFDA17",
-	},
-];
-const statistics2 = [
-	{
-		name: "Israel-Hamas",
-		img: "/img/flags/israel.png",
-		color: "#FF1717",
-		score: 84,
-	},
-	{
-		name: "Ukrainian War",
-		img: "/img/flags/ukrain2.png",
-		color: "#FF1717",
-		score: 50,
-	},
-	{
-		name: "US Outpost Yemen",
-		img: "/img/flags/yemen.png",
-		color: "#FF5D17",
-		score: 50,
-	},
-	{
-		name: "Farmer Protests",
-		img: "/img/flags/farmer.png",
-		color: "#FFDA17",
-		score: 40,
-	},
-];
-
+ 
 
  
 export const ManukaiSearch = [
@@ -394,7 +290,7 @@ export const ManukaiSearch = [
 			{
 				title: "New Search",
 				url: "/int-deck",
-				icon2: <EditIcons />,
+				// icon2: <EditIcons />,
 			},
 			{
 				title: "Intelligence Preset 1",

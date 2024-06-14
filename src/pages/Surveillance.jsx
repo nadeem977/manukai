@@ -2,20 +2,18 @@ import React, { useState } from "react";
 import Layout from "../components/Layout";
 import SideBarConponet from "../components/SideBarConponet";
 import SettingsIcon from '@mui/icons-material/Settings';
-import { KysIconsColors, PausIcons } from "../components/Icon";
+import { KysIconsColors, PausIcons, PlayIcons } from "../components/Icon";
 import DeleteSharpIcon from '@mui/icons-material/DeleteSharp';
-
 import ControlPanel from "../components/ControlPanel";
 import { tableData } from "../assets/data/data";
-
 import { styled } from '@mui/material/styles';
 import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
 import MuiAccordion from '@mui/material/Accordion';
 import MuiAccordionSummary from '@mui/material/AccordionSummary';
-import MuiAccordionDetails from '@mui/material/AccordionDetails';
-import Typography from '@mui/material/Typography';
+import MuiAccordionDetails from '@mui/material/AccordionDetails'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { INTELLIGENCESidebAr } from "../assets/data/data";
+
 const Accordion = styled((props) => (
     <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(({ theme }) => ({
@@ -43,9 +41,11 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 }));
 
 const Surveillance = () => {
+    
     const [panelOpen, setPanelOpen] = useState(false);
     const [expanded, setExpanded] = useState(false);
-
+    const[pousPlay ,setPousPlay] = useState(true);
+    const[rating ,setRating] = useState("");
     const handleChange = (panel) => (event, isExpanded) => {
         setExpanded(isExpanded ? panel : false);
     };
@@ -71,10 +71,10 @@ const Surveillance = () => {
                                     onClick={() => setPanelOpen(!panelOpen)}>
                                     <SettingsIcon /> Control Panel
                                 </button>
-                                <div className="cursor-pointer ml-1">
-                                    <PausIcons />
+                                <div className="cursor-pointer ml-1" onClick={()=>setPousPlay(!pousPlay)}>
+                                   {pousPlay ? <PausIcons/>:<PlayIcons/>}
                                 </div>
-                                <div className="cursor-poiner flex items-center">
+                                <div className="cursor-pointer flex items-center">
                                     <DeleteSharpIcon style={{ color: "#F73838A3",fontSize:"27px" }} />
                                 </div>
                             </div>
@@ -108,7 +108,10 @@ const Surveillance = () => {
                                             id={`panel${i}-header`}>
                                             <div className="w-full flex items-center justify-between  gap-1">
                                                 <p className="px-2 w-[60px] text-[14px] text-[#B3B3B3]">{item?.point}</p>
-                                                <p className="px-2 w-[60px] text-[#B3B3B3]">{item?.fav}</p>
+                                                <p className="px-2 w-[60px] text-[#B3B3B3]">
+                                                    <i class={`bi ${rating===i ?"bi-star-fill text-[#F7D240]":"bi-star"}  text-[16px]`} 
+                                                    onClick={()=>setRating(i)}>
+                                                    </i></p>
                                                 <p className={`w-[60px] uppercase rounded font-semibold flex items-center justify-center h-[30px]
                                                      ${item.risk.toLocaleLowerCase() === "ok" ? "bg-[#4D9F69] text-black"
                                                         : item.risk.toLocaleLowerCase() === "crit" ? "bg-[#A8372D] text-white" : "bg-[#F7D240] text-black"}`}>

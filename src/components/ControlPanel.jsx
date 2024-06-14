@@ -20,9 +20,10 @@ const CustomCheckbox = styled(Checkbox)({
 
 
 const ControlPanel = () => {
+
     const [active1, setActive1] = useState("1")
     const [active2, setActive2] = useState("1")
- 
+    const[defualtvalues, setDefualtvalues] = useState({okval:"(“protest” & “demonstration”) + “rally” + “disobedience” + (“public assembly” & (“environment” + “green” + “co2”))",warnval:"(“protest” & “demonstration”) ",critval:"(“protest” & “demonstration”) "})
     return (
         <>
             <section className="p-2">
@@ -128,31 +129,38 @@ const ControlPanel = () => {
                         </div>
                     </div>
                     <div className='flex flex-col justify-between gap-2 w-full'>
-                        <div className='border-[1px] border-[#4ED2EF80] p-1 rounded min-h-[72px] flex flex-col justify-between gap-1'>
-
-                            <div className='flex  gap-3 '>
-                                <div className='flex items-center gap-1 min-w-[60px] max-w-[60px] text-[#3CCF6E] text-[11px]'>
+                        <div className='flex flex-col gap-2 w-full h-full'>
+                        <div className='border-[1px] border-[#4ED2EF80] p-1 rounded min-h-[72px] h-full flex flex-col justify-between gap-1'>
+                            <div className='flex items-baseline gap-3 h-full'>
+                                <div className='flex items-center gap-1  min-w-[60px] max-w-[60px] text-[#3CCF6E] text-[11px]'>
                                     <KysIconsColors color={"#3CCF6E"} />OK</div>
-                                <div className='text-[#4ED2EF80]'>(“protest” & “demonstration”) + “rally” + “disobedience” + (“public assembly” & (“environment” + “green” + “co2”))</div>
+                                
+                                 <textarea className='w-full h-full text-[#4ED2EF80] resize-none bg-transparent border-none outline-none' value={defualtvalues.okval} 
+                                 onChange={(e)=>setDefualtvalues((prev)=>({...prev,okval:e.target.value}))}></textarea>
                             </div>
                             <div className='w-full flex justify-end mb-[-8px]'><i class="bi bi-check-lg text-[#3CCF6E] "></i></div>
                         </div>
 
-                        <div className='border-[1px] border-[#4ED2EF80] p-1 rounded min-h-[72px] flex flex-col justify-between gap-1'>
-                            <div className='flex gap-3 '>
-                                <div className='flex items-center gap-1 min-w-[60px] max-w-[60px] text-[#F7D240] text-[11px] '><KysIconsColors color={"#F7D240"} />WARN</div>
-                                <div className='text-[#4ED2EF80]'>(“protest” & “demonstration”) </div>
+                        <div className='border-[1px] border-[#4ED2EF80] p-1 rounded min-h-[72px] h-full flex flex-col justify-between gap-1'>
+                            <div className='flex gap-3 items-baseline h-full'>
+                                <div className='flex items-center gap-1 min-w-[60px] max-w-[60px]  text-[#F7D240] text-[11px] '><KysIconsColors color={"#F7D240"} />WARN</div>
+                               
+                                <textarea className='w-full h-full text-[#4ED2EF80] resize-none bg-transparent border-none outline-none' value={defualtvalues.warnval} 
+                                 onChange={(e)=>setDefualtvalues((prev)=>({...prev,warnval:e.target.value}))}></textarea>
                             </div>
                             <div className='w-full flex justify-end mb-[-8px]'><i class="bi bi-check-lg text-[#3CCF6E]"></i></div>
                         </div>
 
-                        <div className='border-[1px] border-[#4ED2EF80] p-1 rounded min-h-[72px] flex flex-col justify-between gap-1'>
-                            <div className='flex gap-3 '>
+                        <div className='border-[1px] border-[#4ED2EF80] p-1 rounded min-h-[72px] h-full flex flex-col justify-between gap-1'>
+                            <div className='flex gap-3 h-full items-baseline'>
                                 <div className='flex items-center gap-1 min-w-[60px]
                                  max-w-[60px] text-[#D23123] text-[11px]'><KysIconsColors color={"#D23123"} />CRIT</div>
-                                <div className='text-[#4ED2EF80]'>(“protest” & “demonstration”) </div>
+                             
+                                <textarea className='w-full h-full text-[#4ED2EF80] resize-none bg-transparent border-none outline-none' value={defualtvalues.critval} 
+                                 onChange={(e)=>setDefualtvalues((prev)=>({...prev,critval:e.target.value}))}></textarea>
                             </div>
                             <div className='w-full flex items-center justify-end text-[#D23123] mb-[-10px]'><small>Syntax Error</small><i class="bi bi-x text-[18px]"></i></div>
+                        </div>
                         </div>
 
                         <div className='flex items-center justify-between gap-2 flex-wrap w-full'>
