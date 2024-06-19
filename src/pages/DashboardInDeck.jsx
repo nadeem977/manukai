@@ -3,7 +3,7 @@ import React, {useEffect, useState } from "react";
 import {AddModelIcon,MinusIcons,ReaportIcon,VerifiedIcon,} from "../components/Icon";
 import Layout from "../components/Layout";
 import SpeakerNotesOffIcon from '@mui/icons-material/SpeakerNotesOff';
-import { data, ManukaiSearch } from "../assets/data/data"
+import { data } from "../assets/data/data"
 import SideBarConponet from "../components/SideBarConponet";
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
@@ -87,7 +87,7 @@ const DashboardInDeck = () => {
 
 
 	return (
-		<Layout sidebar={<SideBarConponet data={ManukaiSearch} />}>
+		<Layout sidebar={<SideBarConponet  />}>
 			 <div className="flex-grow-1 scroll-card-wrapper">
       <div className={`flex gap-2 ${boxlength === 1 ? 'flex-col gap-y-5' : 
 	  `xl:grid ${boxlength === 2 ?"xl:grid-cols-2":boxlength === 3?"xl:grid-cols-3":"xl:grid-cols-4"}`}`}>
@@ -154,7 +154,7 @@ const HistoryCards = ({ addModelstest, removeModelstest, addmodel }) => {
 							<div className="flex items-center gap-2 flex-wrap">
 								<button className="bg-[#4ED2EF] px-1
 								text-[10px] flex items-center h-[22px] gap-1 font-semibold text-black rounded">
-									<i class="bi bi-eye font-bold text-[17pxpx]"></i> Add To Surveillance</button>
+									<i className="bi bi-eye font-bold text-[17pxpx]"></i> Add To Surveillance</button>
 								 
 									<div className="cursor-pointer" onClick={addModelstest}><AddModelIcon/></div>
 									<div className="cursor-pointer"  onClick={removeModelstest}><MinusIcons/></div>
@@ -162,10 +162,10 @@ const HistoryCards = ({ addModelstest, removeModelstest, addmodel }) => {
 							<div className="flex items-center gap-2 flex-wrap">
 								<button className={`border-[1px] border-[#4ED2EF] ${translatetoggle?"bg-[#4ED2EF] text-black":"  text-[#4ED2EF]"} w-fit px-1 flex items-center text-[10px] h-[20px] gap-1 font-semibold  rounded`}
 								 onClick={()=>setTranslatetoggle(!translatetoggle)}>
-									<i class="bi bi-check2 text-[17px] "></i>Translate</button>
+									<i className="bi bi-check2 text-[17px] "></i>Translate</button>
 								<button className={`border-[1px] border-[#4ED2EF] ${profanitytoggle?"bg-[#4ED2EF] text-black":"  text-[#4ED2EF]"}  w-fit px-1 font-semibold text-[10px] h-[20px] rounded flex items-center gap-1`} 
 								onClick={()=>setProfanitytoggle(!profanitytoggle)}>
-									<i class="bi bi-check2 text-[17px]"></i>Profanity Filter</button>
+									<i className="bi bi-check2 text-[17px]"></i>Profanity Filter</button>
 							</div>
 						</div>
 					</div>
@@ -265,7 +265,7 @@ const HistoryCardssignle = ({ addModelstest, removeModelstest, addmodel }) => {
 								<div className="flex items-center gap-2 flex-wrap">
 									<button className="bg-[#4ED2EF] px-2
 								text-[13px] flex items-center h-[31px] gap-1 font-semibold text-black rounded">
-										<i class="bi bi-eye font-bold text-[17px]"></i> Add To Surveillance</button>
+										<i className="bi bi-eye font-bold text-[17px]"></i> Add To Surveillance</button>
 									 
 									<div className="cursor-pointer" onClick={addModelstest}><AddModelIcon/></div>
 									<div className="cursor-pointer"  onClick={removeModelstest}><MinusIcons/></div>

@@ -138,7 +138,7 @@ const ControlPanel = () => {
                                  <textarea className='w-full h-full text-[#4ED2EF80] resize-none bg-transparent border-none outline-none' value={defualtvalues.okval} 
                                  onChange={(e)=>setDefualtvalues((prev)=>({...prev,okval:e.target.value}))}></textarea>
                             </div>
-                            <div className='w-full flex justify-end mb-[-8px]'><i class="bi bi-check-lg text-[#3CCF6E] "></i></div>
+                            <div className='w-full flex justify-end mb-[-8px]'><i className="bi bi-check-lg text-[#3CCF6E] "></i></div>
                         </div>
 
                         <div className='border-[1px] border-[#4ED2EF80] p-1 rounded min-h-[72px] h-full flex flex-col justify-between gap-1'>
@@ -148,7 +148,7 @@ const ControlPanel = () => {
                                 <textarea className='w-full h-full text-[#4ED2EF80] resize-none bg-transparent border-none outline-none' value={defualtvalues.warnval} 
                                  onChange={(e)=>setDefualtvalues((prev)=>({...prev,warnval:e.target.value}))}></textarea>
                             </div>
-                            <div className='w-full flex justify-end mb-[-8px]'><i class="bi bi-check-lg text-[#3CCF6E]"></i></div>
+                            <div className='w-full flex justify-end mb-[-8px]'><i className="bi bi-check-lg text-[#3CCF6E]"></i></div>
                         </div>
 
                         <div className='border-[1px] border-[#4ED2EF80] p-1 rounded min-h-[72px] h-full flex flex-col justify-between gap-1'>
@@ -159,7 +159,7 @@ const ControlPanel = () => {
                                 <textarea className='w-full h-full text-[#4ED2EF80] resize-none bg-transparent border-none outline-none' value={defualtvalues.critval} 
                                  onChange={(e)=>setDefualtvalues((prev)=>({...prev,critval:e.target.value}))}></textarea>
                             </div>
-                            <div className='w-full flex items-center justify-end text-[#D23123] mb-[-10px]'><small>Syntax Error</small><i class="bi bi-x text-[18px]"></i></div>
+                            <div className='w-full flex items-center justify-end text-[#D23123] mb-[-10px]'><small>Syntax Error</small><i className="bi bi-x text-[18px]"></i></div>
                         </div>
                         </div>
 
@@ -180,7 +180,7 @@ const ControlPanel = () => {
                                 &#160;&#160;
                                 <button className='px-2 py-[2px] bg-[#6F6F6F] rounded text-[white]'>Cancel</button>
                                 <button className='px-2 py-[2px] bg-[#009C2C] rounded text-[white] w-[120px] h-[25px] text-[15px] gap-1 flex items-center'>
-                                    <i class="bi bi-check2 text-[18px]"></i> Save & Exit</button>
+                                    <i className="bi bi-check2 text-[18px]"></i> Save & Exit</button>
                             </div>
                         </div>
                     </div>

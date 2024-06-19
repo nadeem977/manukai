@@ -95,7 +95,7 @@ const TagMannager = () => {
           <button
             key={i}
             className="bg-[#114652] text-[10px] p-1 px-2 rounded-[5px] border-[1px] border-[#4ED2EF]">
-            {tag} <i class="bi bi-x-lg" onClick={() => removeTag(tag)}></i>
+            {tag} <i className="bi bi-x-lg" onClick={() => removeTag(tag)}></i>
           </button>
         ))}
       </div>

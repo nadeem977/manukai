@@ -1,7 +1,6 @@
-import { Beta, Check, Instagram, NationalIcon, NovaEngineIcon, Twitter, InternationalIcon, Invalid, EditIcons, NewsItemsH, AIcons, IconsRadars, KysIconsColors, } from "../../components/Icon";
+import { Beta, Check, Instagram, NationalIcon, NovaEngineIcon, Twitter, InternationalIcon, Invalid, } from "../../components/Icon";
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
-
+ 
 
 
 export const data = [
@@ -34,7 +33,7 @@ export const data = [
 		text: "Lorem ipsum dolor sit amet consectetur. Nisi metus a nibh leo etiam ac dignissim rutrum leo. Commodo velit quis est vulputa nulla iaculis in quam in. Pulvinar faucibus nunc ornare aliquam. Eget turpis vitae ultrices phasellus vitae. Dolor praesent nisl massa nisl convallis pulvinar. Malesuada hendrerit at ut diam. Ornare sit dui sit urna et. Leo at cursus pellentesque egestas dignissim vestibulum. Sit tristique nunc sagittis praesent odio purus morbi facilisis. Eget sodales molestie ant.",
 		tags: [" #Amet ipsum."],
 		username: "@BBCNEWS",
-		icon: <i class="bi bi-linkedin text-[20px]"></i>
+		icon: <i className="bi bi-linkedin text-[20px]"></i>
 	},
 	{
 		userImage: "/img/posts/user1.png",
@@ -43,7 +42,7 @@ export const data = [
 		tags: [" #Amet ipsum."],
 		username: "@JoeBiden",
 		img: "/img/posts/post3.png",
-		icon: <i class="bi bi-facebook text-[20px]"></i>
+		icon: <i className="bi bi-facebook text-[20px]"></i>
 	},
 	{
 		userImage: "/img/posts/user1.png",
@@ -67,7 +66,7 @@ export const data = [
 		text: "Lorem ipsum dolor sit amet consectetur. Eget facilisis eget nulla cras leo. Convallis amet in diam tortor id at orci enim id. Fringilla.",
 		username: "@ctc",
 		img: "/img/posts/post2.png",
-		icon: <i class="bi bi-linkedin text-[20px]"></i>
+		icon: <i className="bi bi-linkedin text-[20px]"></i>
 	},
 	{
 		userImage: "/img/posts/user1.png",
@@ -75,7 +74,7 @@ export const data = [
 		text: "Lorem ipsum dolor sit amet consectetur. Nisi metus a nibh leo etiam ac dignissim rutrum leo. Commodo velit quis est vulputa nulla iaculis in quam in. Pulvinar faucibus nunc ornare aliquam. Eget turpis vitae ultrices phasellus vitae. Dolor praesent nisl massa nisl convallis pulvinar. Malesuada hendrerit at ut diam. Ornare sit dui sit urna et. Leo at cursus pellentesque egestas dignissim vestibulum. Sit tristique nunc sagittis praesent odio purus morbi facilisis. Eget sodales molestie ant.",
 		tags: [" #Amet ipsum."],
 		username: "@BBCNEWS",
-		icon: <i class="bi bi-facebook text-[20px]"></i>
+		icon: <i className="bi bi-facebook text-[20px]"></i>
 	},
 	{
 		userImage: "/img/posts/user1.png",
@@ -254,369 +253,12 @@ export const statistics = [
  
 
  
-export const ManukaiSearch = [
-	{
-		title: "ManukaiGPT",
-		icon: <ChatBubbleOutlineIcon style={{color:"#C5F5FF"}} />,
-		bg:"#0e2b34",
-		url: "/int-deck/ManukaiGPT",
-		submenu: [
-			{
-				title: "New Chat",
-				url: "/int-deck/ManukaiGPT",
-				icon2: <i class="bi bi-three-dots-vertical"></i>,
-			},
-			{
-				title: 'Bali Airport',
-				url: "/int-deck/ManukaiGPT",
-				bg: "#00E0FF33",
-				icon2: <i class="bi bi-three-dots-vertical"></i>
-			},
-			{
-				title: 'Amsterdam CS',
-				url: "/int-deck/ManukaiGPT",
-				bg: "#00E0FF33",
-				icon2: <i class="bi bi-three-dots-vertical"></i>
-			},
-
-		],
-	},
-	{
-		title: "Manukai Search",
-		icon: <NovaEngineIcon />,
-		url: "/int-deck",
-		icon2: <Check />,
-		submenu: [
-			{
-				title: "New Search",
-				url: "/int-deck",
-				// icon2: <EditIcons />,
-			},
-			{
-				title: "Intelligence Preset 1",
-				url: "/int-deck/deck3",
-				icon2: <i class="bi bi-three-dots-vertical"></i>,
-			},
-			{
-				title: "Intelligence Preset 1",
-				url: "/int-deck/deck2",
-				icon2: <i class="bi bi-three-dots-vertical"></i>,
-			},
-			{
-				title: "Intelligence Preset 1",
-				url: "/int-deck/deck",
-				icon2: <i class="bi bi-three-dots-vertical"></i>,
-			},
-
-		],
-	},
-	{
-		title: "Surveillance",
-		icon: <i class="bi bi-eye ml-1 text-[16px] text-[#C5F5FF]"></i>,
-		bg:"#0e2b34",
-		submenu: [
-			{
-				title: "New Task",
-				url: "/int-deck/Surveillance",
-				icon2: <i class="bi bi-three-dots-vertical"></i>,
-
-			},
-			{
-				title: "News Item Q",
-				url: "/int-deck/Surveillance1",
-				icon2: <><div className="bg-red-500 rounded-full w-[20px] h-[20px] flex items-center justify-center">4</div></>,
-				icon: <NewsItemsH />
-			},
-			{
-				title: "Social Media Item F",
-				url: "/int-deck/Surveillance2",
-				icon: <AIcons />,
-				icon2: <><div className="bg-yellow-500 text-black rounded-full w-[20px] h-[20px] flex items-center justify-center">2</div></>,
-			},
-			{
-				title: "Dark Web Item A",
-				url: "/int-deck/Surveillance3",
-				textstyle: "italic",
-				icon2: <><div className="bg-green-500 text-black rounded-full w-[20px] h-[20px] flex items-center justify-center">2</div></>,
-				icon: <IconsRadars />
-			},
-			{
-				title: "Dark Web Item B",
-				url: "/int-deck/Surveillance4",
-				textstyle: "italic",
-				icon2: <><div className="bg-green-500 text-black rounded-full w-[20px] h-[20px] flex items-center justify-center">2</div></>,
-				icon: <IconsRadars />
-			},
-			{
-				title: "News Item H",
-				url: "/int-deck/Surveillance5",
-				textstyle: "italic",
-				icon2: <><div className="bg-green-500 text-black rounded-full w-[20px] h-[20px] flex items-center justify-center">0</div></>,
-				icon: <NewsItemsH />
-			},
-		],
-	},
-	{
-		title: "Map Intelligence",
-		icon: <NationalIcon color="#C5F5FF"/>,
-		icon3: <Beta />,
-		bg:"#0e2b34",
-		submenu: [
-			{
-				title: "Sandbox",
-				url: "/int-deck/sandbox",
-				tweakText: <MoreVertIcon />
-			},
-
-		],
-	},
-
-	 
-];
-export const INTELLIGENCESidebAr = [
-	{
-		title: "ManukaiGPT",
-		icon: <ChatBubbleOutlineIcon style={{color:"#C5F5FF"}}/>,
-		bg:"#0e2b34",
-		submenu: [
-			{
-				title: "New Chat",
-				url: "/int-deck/ManukaiGPT",
-				icon2:<i class="bi bi-three-dots-vertical"></i>,
-			},
-			{
-				title: 'Bali Airport',
-				url: "/int-deck/ManukaiGPT/2",
-				bg: "#00E0FF33",
-				icon2: <i class="bi bi-three-dots-vertical"></i>
-			},
-			{
-				title: 'Amsterdam CS',
-				url: "/int-deck/ManukaiGPT/3",
-				bg: "#00E0FF33",
-				icon2: <i class="bi bi-three-dots-vertical"></i>
-			},
-
-		],
-	},
-	{
-		title: "Manukai Search",
-		icon: <NovaEngineIcon color="#C5F5FF"/>,
-		bg:"#0e2b34",
-		submenu: [
-			{
-				title: "New Search",
-				url: "/int-deck",
-				icon2: <i class="bi bi-three-dots-vertical"></i>,
-			},
-			{
-				title: "Intelligence Preset 1",
-				url: "/int-deck/deck3",
-				icon2: <i class="bi bi-three-dots-vertical"></i>,
-			},
-			{
-				title: "Intelligence Preset 1",
-				url: "/int-deck/deck2",
-				icon2: <i class="bi bi-three-dots-vertical"></i>,
-			},
-			{
-				title: "Intelligence Preset 1",
-				url: "/int-deck/deck",
-				icon2: <i class="bi bi-three-dots-vertical"></i>,
-			},
-
-		],
-	},
-	{
-		title: "Surveillance",
-		icon: <i class="bi bi-eye text-[16px] ml-1"></i>,
-		icon2: <Check />,
-		bg:"#0c262e",
-		submenu: [
-			{
-				title: "New Task",
-				url: "/int-deck/Surveillance",
-				icon2: <EditIcons />,
-
-			},
-			{
-				title: "News Item Q",
-				url: "/int-deck/Surveillance1",
-				icon2: <><div className="bg-red-500 rounded-full w-[20px] h-[20px] flex items-center justify-center">4</div></>,
-				icon: <NewsItemsH />
-			},
-			{
-				title: "Social Media Item F",
-				url: "/int-deck/Surveillance2",
-				icon: <AIcons />,
-				icon2: <><div className="bg-yellow-500 text-black rounded-full w-[20px] h-[20px] flex items-center justify-center">2</div></>,
-			},
-			{
-				title: "Dark Web Item A",
-				url: "/int-deck/Surveillance3",
-				textstyle: "italic",
-				icon2: <><div className="bg-green-500 text-black rounded-full w-[20px] h-[20px] flex items-center justify-center">2</div></>,
-				icon: <IconsRadars />
-			},
-			{
-				title: "Dark Web Item B",
-				url: "/int-deck/Surveillance4",
-				textstyle: "italic",
-				icon2: <><div className="bg-green-500 text-black rounded-full w-[20px] h-[20px] flex items-center justify-center">2</div></>,
-				icon: <IconsRadars />
-			},
-			{
-				title: "News Item H",
-				url: "/int-deck/Surveillance5",
-				textstyle: "italic",
-				icon2: <><div className="bg-green-500 text-black rounded-full w-[20px] h-[20px] flex items-center justify-center">0</div></>,
-				icon: <NewsItemsH />
-			},
-		],
-	},
-	{
-		title: "Map Intelligence",
-		icon: <NationalIcon color="#C5F5FF"/>,
-		icon3: <Beta />,
-		bg:"#0e2b34",
-		submenu: [
-			{
-				title: "Sandbox",
-				url: "/int-deck/sandbox",
-				tweakText: <MoreVertIcon />
-			},
-
-		],
-	},
-	
-
-];
-export const ChatINTELLIGENCESidebAr = [
-	{
-		title: "ManukaiGPT",
-		icon: <ChatBubbleOutlineIcon />,
-		icon2: <Check />,
-		bg:"#0c262e",
-		submenu: [
-			{
-				title: "New Chat",
-				url: "/int-deck/ManukaiGPT",
-				icon2: <EditIcons />,
-			},
-			{
-				title: 'Bali Airport',
-				url: "/int-deck/ManukaiGPT/2",
-				bg: "#00E0FF33",
-				icon2: <i class="bi bi-three-dots-vertical"></i>
-			},
-			{
-				title: 'Amsterdam CS',
-				url: "/int-deck/ManukaiGPT/3",
-				bg: "#00E0FF33",
-				icon2: <i class="bi bi-three-dots-vertical"></i>
-			},
-
-		],
-	},
-	{
-		title: "Manukai Search",
-		icon: <NovaEngineIcon color="#C5F5FF" />,
-		bg:"#0e2b34",
-		submenu: [
-			{
-				title: "New Search",
-				url: "/int-deck",
-				icon2:<i class="bi bi-three-dots-vertical"></i>,
-			},
-			{
-				title: "Intelligence Preset 1",
-				// url: "/int-deck/deck3",
-				icon2: <i class="bi bi-three-dots-vertical"></i>,
-			},
-			{
-				title: "Intelligence Preset 1",
-				// url: "/int-deck/deck2",
-				icon2: <i class="bi bi-three-dots-vertical"></i>,
-			},
-			{
-				title: "Intelligence Preset 1",
-				url: "/int-deck/deck",
-				icon2: <i class="bi bi-three-dots-vertical"></i>,
-			},
-
-		],
-	},
-	{
-		title: "Surveillance",
-		icon: <i class="bi bi-eye ml-1 text-[16px] text-[#C5F5FF]"></i>,
-		bg:"#0e2b34",
-		url: "/int-deck/Surveillance",
-		submenu: [
-			{
-				title: "New Task",
-				url: "/int-deck/Surveillance",
-				icon2: <i class="bi bi-three-dots-vertical"></i>,
-
-			},
-			{
-				title: "News Item Q",
-				url: "/int-deck/Surveillance1",
-				icon2: <><div className="bg-red-500 rounded-full w-[20px] h-[20px] flex items-center justify-center">4</div></>,
-				icon: <NewsItemsH />
-			},
-			{
-				title: "Social Media Item F",
-				url: "/int-deck/Surveillance2",
-				icon: <AIcons />,
-				icon2: <><div className="bg-yellow-500 text-black rounded-full w-[20px] h-[20px] flex items-center justify-center">2</div></>,
-			},
-			{
-				title: "Dark Web Item A",
-				url: "/int-deck/Surveillance3",
-				textstyle: "italic",
-				icon2: <><div className="bg-green-500 text-black rounded-full w-[20px] h-[20px] flex items-center justify-center">2</div></>,
-				icon: <IconsRadars />
-			},
-			{
-				title: "Dark Web Item B",
-				url: "/int-deck/Surveillance4",
-				textstyle: "italic",
-				icon2: <><div className="bg-green-500 text-black rounded-full w-[20px] h-[20px] flex items-center justify-center">2</div></>,
-				icon: <IconsRadars />
-			},
-			{
-				title: "News Item H",
-				url: "/int-deck/Surveillance5",
-				textstyle: "italic",
-				icon2: <><div className="bg-green-500 text-black rounded-full w-[20px] h-[20px] flex items-center justify-center">0</div></>,
-				icon: <NewsItemsH />
-			},
-		],
-	},
-	{
-		title: "Map Intelligence",
-		icon: <NationalIcon color="#C5F5FF"/>,
-		icon3: <Beta />,
-		bg:"#0e2b34",
-		submenu: [
-			{
-				title: "Sandbox",
-				url: "/int-deck/sandbox",
-				tweakText: <MoreVertIcon />
-			},
-		
-
-		],
-	},
-
-
-];
 
 
 export const tableData = [
 	{
 		point: "5187",
-		fav: <i class="bi bi-star text-[16px]"></i>,
+		fav: <i className="bi bi-star text-[16px]"></i>,
 		risk: "crit",
 		title: "Title Of News in six words",
 		keywords: "Airport, Lock, Doors, Night, ATM, Security, Fences, Light, 4 more...",
@@ -633,7 +275,7 @@ export const tableData = [
 	},
 	{
 		point: "5186",
-		fav: <i class="bi bi-star text-[16px]"></i>,
+		fav: <i className="bi bi-star text-[16px]"></i>,
 		risk: "warn",
 		title: "Title Of News in six words",
 		keywords: "Airport, Lock, Doors",
@@ -649,7 +291,7 @@ export const tableData = [
 	},
 	{
 		point: "5185",
-		fav: <i class="bi bi-star text-[16px]"></i>,
+		fav: <i className="bi bi-star text-[16px]"></i>,
 		risk: "ok",
 		title: "Title Of News in six words",
 		keywords: "Doors, Night",
@@ -665,7 +307,7 @@ export const tableData = [
 	},
 	{
 		point: "5185",
-		fav: <i class="bi bi-star text-[16px]"></i>,
+		fav: <i className="bi bi-star text-[16px]"></i>,
 		risk: "ok",
 		title: "Title Of News in six words",
 		keywords: "Doors, Night",
@@ -681,7 +323,7 @@ export const tableData = [
 	},
 	{
 		point: "5186",
-		fav: <i class="bi bi-star text-[16px]"></i>,
+		fav: <i className="bi bi-star text-[16px]"></i>,
 		risk: "warn",
 		title: "Title Of News in six words",
 		keywords: "Airport, Lock, Doors",
@@ -690,14 +332,14 @@ export const tableData = [
 		date: '23 Oct 2024 23:53',
 		urls: "/Surveillance",
 		lang: "english",
-		seen: <i class="bi bi-check2 text-[20px] text-[#898989]"></i>,
+		seen: <i className="bi bi-check2 text-[20px] text-[#898989]"></i>,
 		alarts: "Related Alerts:",
 		successms: "Airport, Lock, Doors, Night, ATM, Machine",
 		desc: " This article reports on a peaceful protest held on May 24, 2024, in downtown Metropolis, organized by the environmental group 'Green Future Now.' Thousands of demonstrators participated, calling for stricter climate change policies and increased funding for renewable energy. The event saw no incidents of violence or arrests, and local law enforcement facilitated the protest by managing road closures and traffic. "
 	},
 	{
 		point: "5186",
-		fav: <i class="bi bi-star text-[16px]"></i>,
+		fav: <i className="bi bi-star text-[16px]"></i>,
 		risk: "warn",
 		title: "Title Of News in six words",
 		keywords: "Airport, Lock, Doors",
@@ -713,7 +355,7 @@ export const tableData = [
 	},
 	{
 		point: "5187",
-		fav: <i class="bi bi-star text-[16px]"></i>,
+		fav: <i className="bi bi-star text-[16px]"></i>,
 		risk: "crit",
 		title: "Title Of News in six words",
 		keywords: "Airport, Lock, Doors, Night, ATM, Security, Fences, Light, 4 more...",
@@ -722,14 +364,14 @@ export const tableData = [
 		date: '23 Oct 2024 23:53',
 		urls: "/Surveillance",
 		lang: "english",
-		seen: <i class="bi bi-check2 text-[20px] text-[#898989]"></i>,
+		seen: <i className="bi bi-check2 text-[20px] text-[#898989]"></i>,
 		alarts: "Related Alerts:",
 		successms: "Airport, Lock, Doors, Night, ATM, Machine",
 		desc: " This article reports on a peaceful protest held on May 24, 2024, in downtown Metropolis, organized by the environmental group 'Green Future Now.' Thousands of demonstrators participated, calling for stricter climate change policies and increased funding for renewable energy. The event saw no incidents of violence or arrests, and local law enforcement facilitated the protest by managing road closures and traffic. "
 	},
 	{
 		point: "5186",
-		fav: <i class="bi bi-star text-[16px]"></i>,
+		fav: <i className="bi bi-star text-[16px]"></i>,
 		risk: "warn",
 		title: "Title Of News in six words",
 		keywords: "Airport, Lock, Doors",
@@ -745,7 +387,7 @@ export const tableData = [
 	},
 	{
 		point: "5186",
-		fav: <i class="bi bi-star text-[16px]"></i>,
+		fav: <i className="bi bi-star text-[16px]"></i>,
 		risk: "warn",
 		title: "Title Of News in six words",
 		keywords: "Airport, Lock, Doors",

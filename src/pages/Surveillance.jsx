@@ -12,8 +12,7 @@ import MuiAccordion from '@mui/material/Accordion';
 import MuiAccordionSummary from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { INTELLIGENCESidebAr } from "../assets/data/data";
-
+ 
 const Accordion = styled((props) => (
     <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(({ theme }) => ({
@@ -52,7 +51,7 @@ const Surveillance = () => {
 
     return (
         <>
-            <Layout sidebar={<SideBarConponet data={INTELLIGENCESidebAr}/>}>
+            <Layout sidebar={<SideBarConponet/>}>
             <div className="bg-[#091D22] p-3 rounded-[19px]">
                 <div className="border-[1.2px] rounded-[14px] border-[#4ED2EF80] w-full setHeight overflow-y-auto">
                     <div className="border-b border-[#4ED2EF80] p-2 flex items-center justify-between flex-wrap gap-2">
@@ -109,7 +108,7 @@ const Surveillance = () => {
                                             <div className="w-full flex items-center justify-between  gap-1">
                                                 <p className="px-2 w-[60px] text-[14px] text-[#B3B3B3]">{item?.point}</p>
                                                 <p className="px-2 w-[60px] text-[#B3B3B3]">
-                                                    <i class={`bi ${rating===i ?"bi-star-fill text-[#F7D240]":"bi-star"}  text-[16px]`} 
+                                                    <i className={`bi ${rating===i ?"bi-star-fill text-[#F7D240]":"bi-star"}  text-[16px]`} 
                                                     onClick={()=>setRating(i)}>
                                                     </i></p>
                                                 <p className={`w-[60px] uppercase rounded font-semibold flex items-center justify-center h-[30px]

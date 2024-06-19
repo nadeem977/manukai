@@ -444,7 +444,7 @@ const DashboardMayView = () => {
 															{ e.stopPropagation();
 																setShowBellNotifcation(false)}
 															 }>
-																<i class="bi bi-dash text-[18px] text-white ml-[3px] font-bold leading-[0px]"></i>
+																<i className="bi bi-dash text-[18px] text-white ml-[3px] font-bold leading-[0px]"></i>
 																</div>
 																</h1>
 
@@ -491,7 +491,7 @@ const DashboardMayView = () => {
 														</div>
 														<div className='flex justify-end items-center gap-2 p-2 pt-0'>
 															<button className='bg-[#6F6F6F] w-[77px] h-[25px] text-[15px] rounded '>Cancel</button>
-															<button className='bg-[#009C2C] w-[155px] h-[25px] text-[15px] rounded'><i class="bi bi-check-lg"></i> Set Notification</button>
+															<button className='bg-[#009C2C] w-[155px] h-[25px] text-[15px] rounded'><i className="bi bi-check-lg"></i> Set Notification</button>
 														</div>
 													</div>
 
