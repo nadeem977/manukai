@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Dropdown } from "react-bootstrap";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink ,useLocation} from "react-router-dom";
 import {
 	ArowRounded,
 	ArrowIconsRounded,
@@ -29,6 +29,7 @@ const TopHeader = ({ setSidebarOpen, sidebarOpen, handleTheme, theme }) => {
 	const notificationRef = useRef(null);
 	const [activeButton, setActiveButton] = useState("worldwide");
 	const [showNotification, setShowNotification] = useState(false)
+	const location = useLocation().pathname;
 	const handleClick = (buttonIndex) => {
 		setActiveButton(buttonIndex);
 	};
@@ -49,8 +50,7 @@ const TopHeader = ({ setSidebarOpen, sidebarOpen, handleTheme, theme }) => {
 		return () => {
 			document.removeEventListener("mousedown", handleOutsideClick);
 		};
-	}, [showNotification]);
-
+	}, [showNotification]); 
 
 	return (
 		<>
@@ -68,7 +68,7 @@ const TopHeader = ({ setSidebarOpen, sidebarOpen, handleTheme, theme }) => {
 							<DashboardViewIcon />
 							<span className="d-none d-md-block">Dashboard</span>
 						</NavLink>
-						<NavLink to="/int-deck">
+						<NavLink to="/int-deck/0" className={`${location.slice(0,9)==="/int-deck"?"active":""}`}>
 							<IntelDeckIcon />
 							<span className="d-none d-md-block">Inteldeck</span>
 						</NavLink>

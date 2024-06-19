@@ -1,63 +1,66 @@
-import React, { useContext, useState, useEffect } from "react";
-import { auth } from "../../firebase/firebase";
-// import { GoogleAuthProvider } from "firebase/auth";
-import { onAuthStateChanged } from "firebase/auth";
+import React, { useContext, useState, useEffect, createContext } from "react";
+// import { auth, GoogleAuthProvider } from "../../firebase/firebase";
+// import { onAuthStateChanged } from "firebase/auth";
 
-const AuthContext = React.createContext();
+export const AppContext = createContext();
 
-export function useAuth() {
-  return useContext(AuthContext);
-}
+export const ContextProvider = ({ children }) => {
+  // const [currentUser, setCurrentUser] = useState(null);
+  // const [userLoggedIn, setUserLoggedIn] = useState(false);
+  // const [isEmailUser, setIsEmailUser] = useState(false);
+  // const [isGoogleUser, setIsGoogleUser] = useState(false);
+  // const [loading, setLoading] = useState(true);
+  const [newChat, setNewChat] = useState([1]);
+  const [newSearch, setSearch] = useState([1]);
+  const [newSurvel, setSurvel] = useState([1]);
 
-export function AuthProvider({ children }) {
-  const [currentUser, setCurrentUser] = useState(null);
-  const [userLoggedIn, setUserLoggedIn] = useState(false);
-  const [isEmailUser, setIsEmailUser] = useState(false);
-  const [isGoogleUser, setIsGoogleUser] = useState(false);
-  const [loading, setLoading] = useState(true);
+  // useEffect(() => {
+  //   const unsubscribe = onAuthStateChanged(auth, (user) => {
+  //     initializeUser(user);
+  //   });
+  //   return unsubscribe;
+  // }, []);
 
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, initializeUser);
-    return unsubscribe;
-  }, []);
+  // async function initializeUser(user) {
+  //   if (user) {
+  //     setCurrentUser({ ...user });
 
-  async function initializeUser(user) {
-    if (user) {
+  //     // check if provider is email and password login
+  //     const isEmail = user.providerData.some(
+  //       (provider) => provider.providerId === "password"
+  //     );
+  //     setIsEmailUser(isEmail);
 
-      setCurrentUser({ ...user });
+  //     // check if the auth provider is google or not
+  //     const isGoogle = user.providerData.some(
+  //       (provider) => provider.providerId === GoogleAuthProvider.PROVIDER_ID
+  //     );
+  //     setIsGoogleUser(isGoogle);
 
-      // check if provider is email and password login
-      const isEmail = user.providerData.some(
-        (provider) => provider.providerId === "password"
-      );
-      setIsEmailUser(isEmail);
+  //     setUserLoggedIn(true);
+  //   } else {
+  //     setCurrentUser(null);
+  //     setUserLoggedIn(false);
+  //   }
 
-      // check if the auth provider is google or not
-    //   const isGoogle = user.providerData.some(
-    //     (provider) => provider.providerId === GoogleAuthProvider.PROVIDER_ID
-    //   );
-    //   setIsGoogleUser(isGoogle);
-
-      setUserLoggedIn(true);
-    } else {
-      setCurrentUser(null);
-      setUserLoggedIn(false);
-    }
-
-    setLoading(false);
-  }
+  //   setLoading(false);
+  // }
 
   const value = {
-    userLoggedIn,
-    isEmailUser,
-    isGoogleUser,
-    currentUser,
-    setCurrentUser
+    // userLoggedIn,
+    // isEmailUser,
+    // isGoogleUser,
+    // currentUser,
+    // setCurrentUser,
+    newChat,
+    setNewChat,
+    newSearch, setSearch,
+    newSurvel, setSurvel
   };
 
   return (
-    <AuthContext.Provider value={value}>
-      {!loading && children}
-    </AuthContext.Provider>
+    <AppContext.Provider value={value}>
+      {children}
+    </AppContext.Provider>
   );
-}
+};
