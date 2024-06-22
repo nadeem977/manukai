@@ -1,19 +1,20 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import mapview from "../../../assets/img/map-view.png"
 import microsoft from "../../../assets/img/microsoft.png"
+import { AppContext } from '../../../contexts/authContext';
 
 const CreateAccount = () => {
 
     const [pwdshow, setPdwShow] = useState(false)
+    const {setShowModal} = useContext(AppContext)
     return (
         <>
-            <div className=' object-cover ' style={{ backgroundImage: `url(${mapview})`, backgroundColor: "rgb(0,0,0,0.85)" }}>
-                <main className=" min-h-screen flex self-center place-content-center place-items-center">
+             <main className=" min-h-screen w-full flex self-center place-content-center place-items-center">
                     <div className=" bg-opacity-10 backdrop-blur space-y-5 relative w-full  max-w-[461px] mx-3 sm:mx-auto  p-4 shadow-xl h-full min-h-[531px] border-[1px]  border-[#4ED2EF80] bg-[#03191E4D] rounded-xl">
                         <div className="mt-2 flex flex-col gap-2">
-                            <Link to="/Login" className='hover:text-white  '><i className="bi bi-arrow-left"></i> Back</Link>
+                            <span className='hover:text-white cursor-pointer ' onClick={()=>setShowModal((prev)=>({...prev,login:true,register:false}))}><i className="bi bi-arrow-left"></i> Back</span>
                             <h3 className="text-white text-xl font-semibold sm:text-[24px]">Continue with your email</h3>
                         </div>
                         <div className='flex flex-col mt-5 gap-3 text-[16px] w-full h-fit'>
@@ -37,7 +38,6 @@ const CreateAccount = () => {
                         </div>
                     </div>
                 </main>
-            </div>
         </>
     )
 }

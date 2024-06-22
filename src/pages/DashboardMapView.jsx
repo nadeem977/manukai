@@ -371,7 +371,7 @@ const DashboardMayView = () => {
 
 	const { cursor, popupInfo, isPopupExpanded, mapAlerts } = state;
 	const bgColor2 = popupInfo?.color || "#FF5208";
-
+   const[activebtn, setActivebtn] = useState("live")
 
 	var popupElement = document.querySelector('.mapboxgl-popup');
 	if (popupElement) {
@@ -513,11 +513,13 @@ const DashboardMayView = () => {
 					</Map>
 					<div className='absolute top-0 left-0 '>
 						<div className='relative p-2  flex items-center gap-1'>
-						<p className='text-[#A1A1A1]'>Live Alerts </p> <p className='pr-5'>/ AI Predictive Alerts
-							  <small className='text-[#FFE600] text-[10px] mt-[-10px] top-3 absolute'>PRO</small></p>  
-							  /
-							  <p className='pr-5 text-[#A1A1A1]'>  AI Heatmap 
-								<small className='text-[#FFE600] text-[10px] mt-[-10px] top-3 absolute opacity-[0.80]'>PRO+</small></p>
+						<button className={`${activebtn ==="live"?"text-white":"text-[#A1A1A1]"}`}onClick={()=>setActivebtn('live')}>Live risk  </button>
+						/
+						 <button className={`${activebtn ==="ai"?"text-white":"text-[#A1A1A1]"}`}onClick={()=>setActivebtn('ai')}> AI prediction 
+						 {/* <small className='text-[#FFE600] text-[10px] mt-[-10px] top-3 absolute'>PRO</small> */}
+						</button>/
+						 <button className={`${activebtn ==="map"?"text-white":"text-[#A1A1A1]"}`}onClick={()=>setActivebtn('map')}>AI heat map
+							{/* <small className='text-[#FFE600] text-[10px] mt-[-10px] top-3 absolute opacity-[0.80]'>PRO+</small> */}</button>
 						</div>
 					</div>
 					<div className="bottom-right-fixed">

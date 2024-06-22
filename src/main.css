@@ -323,7 +323,14 @@ select .options:focus {
     padding-left: 0px !important;
 }
 
-
+.modallogin{
+transform:translate(-50%, -50%);
+position: absolute;
+top: 50%;
+left: 50%;
+width: 100%;
+max-width: 500px;
+}
 
 
 
