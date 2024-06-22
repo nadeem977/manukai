@@ -14,8 +14,7 @@ const ManukaiGPT = () => {
     setUsersms((prev) => [...prev, userprompts]);
     setUserprompts("");
   };
-
-  console.log(usersms);
+ 
   return (
     <>
       <Layout sidebar={<SideBarConponet />}>

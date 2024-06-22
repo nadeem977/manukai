@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useContext } from "react";
 import { Dropdown } from "react-bootstrap";
 import { Link, NavLink ,useLocation} from "react-router-dom";
 import {
@@ -21,10 +21,23 @@ import kindomimg from "../assets/img/kindom.png"
 import tatiimg from "../assets/img/tati.png"
 import plstingimg from "../assets/img/palstin.png"
 import rusiaimg from "../assets/img/rusia.png"
-import egyptgimg from "../assets/img/egypt.png"
+import egyptgimg from "../assets/img/egypt.png" 
+import Modal from '@mui/material/Modal'; 
+import Login from "./auth/login/Login";
+import CreateAccount from "./auth/CreateAccount/CreateAccount";
+import Register from "./auth/register/Register";
+import { AppContext } from "../contexts/authContext";
 
-
+ 
 const TopHeader = ({ setSidebarOpen, sidebarOpen, handleTheme, theme }) => {
+
+
+	const [open, setOpen] = React.useState(false);
+    const handleClose = () =>{
+		setShowModal((prev)=>({...prev ,login:true,register:false}))
+		setOpen(false);
+	} 
+    const {showmodal , setShowModal} = useContext(AppContext)
 
 	const notificationRef = useRef(null);
 	const [activeButton, setActiveButton] = useState("worldwide");
@@ -54,6 +67,18 @@ const TopHeader = ({ setSidebarOpen, sidebarOpen, handleTheme, theme }) => {
 
 	return (
 		<>
+		 <div>
+      
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description">
+        <div className="modallogin">
+       {showmodal.login ?  <Login/>:showmodal.register ?<Register/>:<CreateAccount/>}
+        </div>
+      </Modal>
+    </div>
 			<header className="header-section">
 				<Link className="header-logo">
 					<img src={theme === "premiere" ? logoBlack : logo} alt="" />
@@ -277,7 +302,8 @@ const TopHeader = ({ setSidebarOpen, sidebarOpen, handleTheme, theme }) => {
 									Manukai Premire
 								</Dropdown.Item>
 								<Dropdown.Item>Order</Dropdown.Item>
-								 <Link to="/Login"   className="w-full pl-4  dropdown-item" >Login</Link>
+								<Dropdown.Item onClick={()=>setOpen(true)}>Login</Dropdown.Item>
+								 {/* <Link to="/Login"   className="w-full pl-4  dropdown-item" >Login</Link> */}
 								<Dropdown.Item className="d-lg-none">Log Out</Dropdown.Item>
 							</Dropdown.Menu>
 						</Dropdown>

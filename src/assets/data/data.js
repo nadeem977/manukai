@@ -1,6 +1,7 @@
 import { Beta, Check, Instagram, NationalIcon, NovaEngineIcon, Twitter, InternationalIcon, Invalid, } from "../../components/Icon";
 import MoreVertIcon from '@mui/icons-material/MoreVert';
- 
+import tlgrmimg from "../img/tlgrm.png" 
+import taligrmimg from "../img/taligram.png" 
 
 
 export const data = [
@@ -260,6 +261,7 @@ export const tableData = [
 		point: "5187",
 		fav: <i className="bi bi-star text-[16px]"></i>,
 		risk: "crit",
+		appicon:tlgrmimg,
 		title: "Title Of News in six words",
 		keywords: "Airport, Lock, Doors, Night, ATM, Security, Fences, Light, 4 more...",
 		scoure: "Telegraaf",
@@ -282,6 +284,7 @@ export const tableData = [
 		scoure: "Telegraaf",
 		countery: "The Netherlands",
 		date: '23 Oct 2024 23:53',
+		appicon:tlgrmimg,
 		urls: "/Surveillance",
 		lang: "english",
 		seen: "new",
@@ -299,6 +302,7 @@ export const tableData = [
 		countery: "The Netherlands",
 		date: '25 Oct 2024 23:53',
 		urls: "/Surveillance",
+		appicon:taligrmimg,
 		lang: "english",
 		seen: "new",
 		alarts: "Related Alerts:",
@@ -306,7 +310,7 @@ export const tableData = [
 		desc: " This article reports on a peaceful protest held on May 24, 2024, in downtown Metropolis, organized by the environmental group 'Green Future Now.' Thousands of demonstrators participated, calling for stricter climate change policies and increased funding for renewable energy. The event saw no incidents of violence or arrests, and local law enforcement facilitated the protest by managing road closures and traffic. "
 	},
 	{
-		point: "5185",
+		point: "5184",
 		fav: <i className="bi bi-star text-[16px]"></i>,
 		risk: "ok",
 		title: "Title Of News in six words",
@@ -317,12 +321,13 @@ export const tableData = [
 		urls: "/Surveillance",
 		lang: "english",
 		seen: "new",
+		appicon:taligrmimg,
 		alarts: "Related Alerts:",
 		successms: "Airport, Lock, Doors, Night, ATM, Machine",
 		desc: " This article reports on a peaceful protest held on May 24, 2024, in downtown Metropolis, organized by the environmental group 'Green Future Now.' Thousands of demonstrators participated, calling for stricter climate change policies and increased funding for renewable energy. The event saw no incidents of violence or arrests, and local law enforcement facilitated the protest by managing road closures and traffic. "
 	},
 	{
-		point: "5186",
+		point: "5183",
 		fav: <i className="bi bi-star text-[16px]"></i>,
 		risk: "warn",
 		title: "Title Of News in six words",
@@ -332,13 +337,14 @@ export const tableData = [
 		date: '23 Oct 2024 23:53',
 		urls: "/Surveillance",
 		lang: "english",
+		appicon:tlgrmimg,
 		seen: <i className="bi bi-check2 text-[20px] text-[#898989]"></i>,
 		alarts: "Related Alerts:",
 		successms: "Airport, Lock, Doors, Night, ATM, Machine",
 		desc: " This article reports on a peaceful protest held on May 24, 2024, in downtown Metropolis, organized by the environmental group 'Green Future Now.' Thousands of demonstrators participated, calling for stricter climate change policies and increased funding for renewable energy. The event saw no incidents of violence or arrests, and local law enforcement facilitated the protest by managing road closures and traffic. "
 	},
 	{
-		point: "5186",
+		point: "5182",
 		fav: <i className="bi bi-star text-[16px]"></i>,
 		risk: "warn",
 		title: "Title Of News in six words",
@@ -348,13 +354,14 @@ export const tableData = [
 		date: '23 Oct 2024 23:53',
 		urls: "/Surveillance",
 		lang: "english",
+		appicon:taligrmimg,
 		seen: "new",
 		alarts: "Related Alerts:",
 		successms: "Airport, Lock, Doors, Night, ATM, Machine",
 		desc: " This article reports on a peaceful protest held on May 24, 2024, in downtown Metropolis, organized by the environmental group 'Green Future Now.' Thousands of demonstrators participated, calling for stricter climate change policies and increased funding for renewable energy. The event saw no incidents of violence or arrests, and local law enforcement facilitated the protest by managing road closures and traffic. "
 	},
 	{
-		point: "5187",
+		point: "5181",
 		fav: <i className="bi bi-star text-[16px]"></i>,
 		risk: "crit",
 		title: "Title Of News in six words",
@@ -364,13 +371,14 @@ export const tableData = [
 		date: '23 Oct 2024 23:53',
 		urls: "/Surveillance",
 		lang: "english",
+		appicon:tlgrmimg,
 		seen: <i className="bi bi-check2 text-[20px] text-[#898989]"></i>,
 		alarts: "Related Alerts:",
 		successms: "Airport, Lock, Doors, Night, ATM, Machine",
 		desc: " This article reports on a peaceful protest held on May 24, 2024, in downtown Metropolis, organized by the environmental group 'Green Future Now.' Thousands of demonstrators participated, calling for stricter climate change policies and increased funding for renewable energy. The event saw no incidents of violence or arrests, and local law enforcement facilitated the protest by managing road closures and traffic. "
 	},
 	{
-		point: "5186",
+		point: "5180",
 		fav: <i className="bi bi-star text-[16px]"></i>,
 		risk: "warn",
 		title: "Title Of News in six words",
@@ -381,12 +389,13 @@ export const tableData = [
 		urls: "/Surveillance",
 		lang: "english",
 		seen: "new",
+		appicon:taligrmimg,
 		alarts: "Related Alerts:",
 		successms: "Airport, Lock, Doors, Night, ATM, Machine",
 		desc: " This article reports on a peaceful protest held on May 24, 2024, in downtown Metropolis, organized by the environmental group 'Gr'en Future Now.' Thousands of demonstrators participated, calling for stricter climate change policies and increased funding for renewable energy. The event saw no incidents of violence or arrests, and local law enforcement facilitated the protest by managing road closures and traffic. "
 	},
 	{
-		point: "5186",
+		point: "5179",
 		fav: <i className="bi bi-star text-[16px]"></i>,
 		risk: "warn",
 		title: "Title Of News in six words",
@@ -397,6 +406,7 @@ export const tableData = [
 		urls: "/Surveillance",
 		lang: "english",
 		seen: "new",
+		appicon:tlgrmimg,
 		alarts: "Related Alerts:",
 		successms: "Airport, Lock, Doors, Night, ATM, Machine",
 		desc: " This article reports on a peaceful protest held on May 24, 2024, in downtown Metropolis, organized by the environmental group 'Green Future Now.' Thousands of demonstrators participated, calling for stricter climate change policies and increased funding for renewable energy. The event saw no incidents of violence or arrests, and local law enforcement facilitated the protest by managing road closures and traffic. "

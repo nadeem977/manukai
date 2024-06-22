@@ -88,18 +88,23 @@ export const SearchBars = ()=>{
       setEditName("") 
     }
   }
-	const CreateNewChat = () => {
+	const CreateNewChat = (event) => {
+    event.stopPropagation();
 	  setSearch((prev) => {
 		  const newNumber = prev[prev.length - 1] + 1;
 		  return [...prev, newNumber];
 	  });
 	};
-	const removingchat = () => {
+	const removingchat = (event) => {
 	  setSearch((prev) => {
 	 return prev.slice(0, -1);
 	  });
 	};
-
+useEffect(()=>{
+ if(location.length <13){
+   setExpanded("panel1")
+ }
+},[location])
   return (
     <>
      <ul className="manukai-data-menu">
@@ -168,7 +173,8 @@ export const ManukaiGPTBars = ()=>{
       setEditName("") 
     }
   }
-	const CreateNewChat = () => {
+	const CreateNewChat = (event) => {
+    event.stopPropagation();
 	  setNewChat((prev) => {
 		  const newNumber = prev[prev.length - 1] + 1;
 		  return [...prev, newNumber];
@@ -179,6 +185,14 @@ export const ManukaiGPTBars = ()=>{
 	 return prev.slice(0, -1);
 	  });
 	};
+
+
+  useEffect(()=>{
+    if(location.slice(0,20)==="/int-deck/ManukaiGPT"){
+      setExpanded("panel1")
+    }
+   },[location])
+
 
   return (
     <>
@@ -249,7 +263,8 @@ export const Surveillance = ()=>{
       setEditName("") 
     }
   }
-	const CreateNewChat = () => {
+	const CreateNewChat = (event) => {
+    event.stopPropagation();
 	  setSurvel((prev) => {
 		  const newNumber = prev[prev.length - 1] + 1;
 		  return [...prev, newNumber];
@@ -260,6 +275,14 @@ export const Surveillance = ()=>{
 	 return prev.slice(0, -1);
 	  });
 	};
+
+  useEffect(()=>{
+    if(location.slice(0,22)==="/int-deck/Surveillance"){
+      setExpanded("panel1")
+    }
+   },[location])
+
+
 
   return (
     <>
