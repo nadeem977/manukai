@@ -37,7 +37,7 @@ const TagMannager = () => {
 
   return (
     <div>
-        <div className="flex items-center cursor-pointer gap-2 w-full border-[1.5px] h-[36px] rounded 	overflow-hidden  border-[#4ED2EF80] pr-3">
+        <div className="flex items-center cursor-pointer gap-2 min-w-[200px] w-full border-[1.5px] h-[36px] rounded 	overflow-hidden  border-[#4ED2EF80] pr-3">
           <div
             onClick={() => setSearchOpen(!searchOpen)}
             className="w-full p-2 py-3 text-[14px] h-full text-[#787878] flex items-center bg-transparent outline-none border-none">
