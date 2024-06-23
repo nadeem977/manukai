@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import chelimg from "../assets/img/chel.png"
 import {ExalIcons, PlusRoundIcon, StrokIcons ,RepeatedArrow, EditIcons, LinkThumb, DesLikeThumbe} from '../components/Icon'
 import { LuDownload } from "react-icons/lu";
@@ -7,6 +7,8 @@ import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import Addsurveillance from "./Addsurveillance";
+import { AppContext } from "../contexts/authContext";
 
 const options = [
     'Atria',
@@ -20,9 +22,11 @@ const options = [
 
 export const GptReplay = () => {
 
-
+ 
+  const {setOpenmodal} = useContext(AppContext)
   return (
     <>
+    <Addsurveillance/>
       <div className="flex flex-col gap-2 mt-2">
         <div className="flex items-start gap-3 mt-4 w-full">
           <img src={chelimg} alt="icon" />
@@ -63,7 +67,7 @@ export const GptReplay = () => {
                 <button
                   className="flex items-center gap-2 bg-[#0F2A31] 
                               justify-center w-fit h-[34px] border-[1px] border-[#15677A] font-normal text-[14px] p-2 rounded-full text-white"
-                >
+               onClick={()=>setOpenmodal(true)} >
                   <PlusRoundIcon color="#4ED2EF" /> Add to Surveillance Tasks
                 </button>
               </div>

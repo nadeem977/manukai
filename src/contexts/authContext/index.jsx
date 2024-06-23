@@ -13,6 +13,8 @@ export const ContextProvider = ({ children }) => {
   const [newChat, setNewChat] = useState([1]);
   const [newSearch, setSearch] = useState([1]);
   const [newSurvel, setSurvel] = useState([1]);
+  const[openmodal, setOpenmodal] = useState(false);
+  const[openmodals, setOpenmodals] = useState(false);
   const [showmodal , setShowModal] = useState({login:true,register:false,});
   // useEffect(() => {
   //   const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -56,7 +58,9 @@ export const ContextProvider = ({ children }) => {
     setNewChat,
     newSearch, setSearch,
     newSurvel, setSurvel,
-    showmodal , setShowModal
+    showmodal , setShowModal,
+    openmodal, setOpenmodal,
+    openmodals, setOpenmodals
   };
 
   return (

@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
-import React, {useEffect, useState } from "react";
+import React, {useContext, useEffect, useState } from "react";
 import {AddModelIcon,MinusIcons,ReaportIcon,VerifiedIcon,} from "../components/Icon";
 import Layout from "../components/Layout";
 import SpeakerNotesOffIcon from '@mui/icons-material/SpeakerNotesOff';
@@ -11,6 +11,8 @@ import { styled } from '@mui/system';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import SpeakerNotesIcon from '@mui/icons-material/SpeakerNotes';
 import TagMannager from "../components/TagMannager";
+import Addsurveillance from "../components/Addsurveillance";
+import { AppContext } from "../contexts/authContext";
 
 const CustomSelect = styled(Select)(({ theme }) => ({
 	width: '100%',
@@ -88,6 +90,7 @@ const DashboardInDeck = () => {
 
 	return (
 		<Layout sidebar={<SideBarConponet  />}>
+			
 			 <div className="flex-grow-1 scroll-card-wrapper">
       <div className={`flex gap-2 ${boxlength === 1 ? 'flex-col gap-y-5' : 
 	  `xl:grid ${boxlength === 2 ?"xl:grid-cols-2":boxlength === 3?"xl:grid-cols-3":"xl:grid-cols-4"}`}`}>
@@ -118,12 +121,16 @@ const HistoryCards = ({ addModelstest, removeModelstest, addmodel }) => {
  
 	const[translatetoggle ,setTranslatetoggle] = React.useState(true);
 	const[profanitytoggle ,setProfanitytoggle] = React.useState(true);
+	// const {setOpenmodals,openmodals} = useContext(AppContext)
 	const [age, setAge] = React.useState('');
 	const handleChange = (event) => {
 		setAge(event.target.value);
 	};
-
-	 
+ 
+	// const handleClick = () => {
+	// 	const randomNumber = Math.floor(Math.random() * 100); 
+	// 	setOpenmodals(randomNumber); 
+	//   };
 
 	return (
 		<>
@@ -147,14 +154,14 @@ const HistoryCards = ({ addModelstest, removeModelstest, addmodel }) => {
 									<MenuItem value={30}>Dark Web</MenuItem>
 								</CustomSelect>
 							</div>
-
+							{/* {openmodals && <Addsurveillance openmo={openmodals}/>} */}
 							<div className="alert-text pl-1">Items 26</div>
 						</div>
 						<div className="flex flex-col gap-2">
 							<div className="flex items-center gap-2 flex-wrap">
 								<button className="bg-[#4ED2EF] px-1
 								text-[10px] flex items-center h-[22px] gap-1 font-semibold text-black rounded">
-									<i className="bi bi-eye font-bold text-[17pxpx]"></i> Add To Surveillance</button>
+									<i className="bi bi-eye font-bold text-[17pxpx]" ></i> Add To Surveillance</button>
 								 
 									<div className="cursor-pointer" onClick={addModelstest}><AddModelIcon/></div>
 									<div className="cursor-pointer"  onClick={removeModelstest}><MinusIcons/></div>
@@ -229,10 +236,12 @@ const HistoryCardssignle = ({ addModelstest, removeModelstest, addmodel }) => {
 	const [age, setAge] = React.useState('');
 	const[translatetoggle ,setTranslatetoggle] = React.useState(false);
 	const[profanitytoggle ,setProfanitytoggle] = React.useState(false);
+     const {setOpenmodal} = useContext(AppContext)
 	const handleChange = (event) => {
-		setAge(event.target.value);
+		setAge(event.target.value);	
 	};
-
+	
+	
 	 
 	return (
 		<>
@@ -256,7 +265,7 @@ const HistoryCardssignle = ({ addModelstest, removeModelstest, addmodel }) => {
 									<MenuItem value={30}>Dark Web</MenuItem>
 								</CustomSelect>
 							</div>
-
+							<Addsurveillance />
 							<div className="alert-text pl-1 text-white">Items 26</div>
 						</div>
 						<div className="flex gap-3">
@@ -264,8 +273,8 @@ const HistoryCardssignle = ({ addModelstest, removeModelstest, addmodel }) => {
 							<div className="flex flex-col justify-between gap-2">
 								<div className="flex items-center gap-2 flex-wrap">
 									<button className="bg-[#4ED2EF] px-2
-								text-[13px] flex items-center h-[31px] gap-1 font-semibold text-black rounded">
-										<i className="bi bi-eye font-bold text-[17px]"></i> Add To Surveillance</button>
+								text-[13px] flex items-center h-[31px] gap-1 font-semibold text-black rounded" onClick={()=>setOpenmodal(true)}>
+										<i className="bi bi-eye font-bold text-[17px]" ></i> Add To Surveillance</button>
 									 
 									<div className="cursor-pointer" onClick={addModelstest}><AddModelIcon/></div>
 									<div className="cursor-pointer"  onClick={removeModelstest}><MinusIcons/></div>
