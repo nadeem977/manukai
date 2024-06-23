@@ -64,7 +64,7 @@ const ControlPanel = () => {
                                     <p>Till:</p>
                                     <div className="w-full">
                                     <MuiSelect/>
-							</div>
+							         </div>
                                 </div>
                             </div>
                         </div>

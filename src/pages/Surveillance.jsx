@@ -44,25 +44,43 @@ const AccordionSummary = styled((props) => <MuiAccordionSummary {...props} />)(
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   padding: theme.spacing(2),
 }));
- 
+
 const Surveillance = () => {
+
+
+
   const [panelOpen, setPanelOpen] = useState(false);
-  const [expanded, setExpanded] = useState(false);
   const [pousPlay, setPousPlay] = useState(true);
-  const [rating, setRating] = useState("");
+  const [rating, setRating] = useState([]);
   const [data, setData] = useState([]);
   const [reversingData, setReversingData] = useState(false);
   const [profanitytoggle, setProfanitytoggle] = React.useState(false);
-
-  const handleChange = (panel) => (event, isExpanded) => {
-    setExpanded(isExpanded ? panel : false);
-  };
   const [translatetoggle, setTranslatetoggle] = React.useState(false);
+
+
+
+  const [expand, setExpand] = React.useState(false);
+  const toggleAcordion = (key) => {
+    setExpand(key);
+  };
+
 
   useEffect(() => {
     const tabledata = reversingData ? [...tableData].reverse() : tableData;
     setData(tabledata);
   }, [reversingData]);
+
+  const handleStarClick = (index) => {
+    setRating((prev) => {
+      if (prev.includes(index)) {
+        return prev.filter((i) => i !== index);
+      } else {
+        return [...prev, index];
+      }
+    });
+  };
+console.log(rating)
+
 
   return (
     <>
@@ -112,7 +130,7 @@ const Surveillance = () => {
               <section className="min-w-[1370px]  text-white">
                 <div className="flex items-center justify-between gap-1 text-[#B3B3B3] border-b-[1px] border-[#2b2b37] text-[11px] pr-4">
                   <p
-                    className="p-2 flex items-center w-[60px] resize-x overflow-auto cursor-pointer"
+                    className="p-2 flex items-center w-[60px] cursor-pointer"
                     onClick={() => setReversingData((prev) => !prev)}
                   >
                     #
@@ -123,91 +141,79 @@ const Surveillance = () => {
                     />
                   </p>
 
-                  <p className="p-2 flex items-start tracking-[2px] w-[60px] resize-x overflow-auto">
+                  <p className="p-2 flex items-start tracking-[2px] w-[60px] ">
                     FAV
                   </p>
-                  <p className="p-2 flex justify-center tracking-[2px] w-[60px] resize-x overflow-auto">
+                  <p className="p-2 flex justify-center tracking-[2px] w-[60px] ">
                     RISK
                   </p>
-                  <p className="p-2 flex justify-center tracking-[2px] w-[60px] resize-x overflow-auto">
+                  <p className="p-2 flex justify-center tracking-[2px] w-[60px] ">
                     APP
                   </p>
-                  <p className="p-2 flex items-start tracking-[2px] w-[250px] resize-x overflow-auto">
+                  <p className="p-2 flex items-start tracking-[2px] w-[250px] ">
                     TITLE
                   </p>
-                  <p className="p-2 flex items-start tracking-[2px] w-[250px] resize-x overflow-auto">
+                  <p className="p-2 flex items-start tracking-[2px] w-[250px] ">
                     KEYWORDS
                   </p>
-                  <p className="p-2 flex items-start tracking-[2px] w-[100px] resize-x overflow-auto">
+                  <p className="p-2 flex items-start tracking-[2px] w-[100px] ">
                     SOURCE
                   </p>
-                  <p className="p-2 flex items-start tracking-[2px]  w-[140px] resize-x overflow-auto">
+                  <p className="p-2 flex items-start tracking-[2px]  w-[140px] ">
                     COUNTRY
                   </p>
-                  <p className="p-2 flex items-start tracking-[2px]  w-[125px] resize-x overflow-auto">
+                  <p className="p-2 flex items-start tracking-[2px]  w-[125px] ">
                     DATE
                   </p>
-                  <p className="p-2 flex items-start tracking-[2px]  w-[50px] resize-x overflow-auto">
+                  <p className="p-2 flex items-start tracking-[2px]  w-[50px] ">
                     URL
                   </p>
-                  <p className="p-2 flex items-start tracking-[2px]  w-[80px] resize-x overflow-auto">
+                  <p className="p-2 flex items-start tracking-[2px]  w-[80px] ">
                     LANG
                   </p>
-                  <p className="p-2 flex items-start tracking-[2px]  w-[50px] mr-3 resize-x overflow-auto">
+                  <p className="p-2 flex items-start tracking-[2px]  w-[50px] mr-3 ">
                     SEEN
                   </p>
                 </div>
                 {data?.map((item, i) => (
                   <React.Fragment key={i}>
                     <Accordion
-                      expanded={expanded === `panel${i}`}
-                      onChange={handleChange(`panel${i}`)}
+                    expanded={expand === i ?true : false} 
                       style={{
                         background: i % 2 === 0 ? "#0F252A" : "transparent",
                         color: "white",
                         padding: 0,
                         border:
-                          expanded === `panel${i}` ? "1px solid #12A5C6" : "",
+                        expand ===i ? "1px solid #12A5C6" : "",
                       }}>
                       <AccordionSummary
-                        style={{ padding: 0 }}
-                        expandIcon={
-                          <ArrowForwardIosSharpIcon
-                            style={{
-                              color: "#54ACBF",
-                              fontSize: "15px",
-                              marginRight: "10px",
-                            }}/>
-                        }
-                        aria-controls={`panel${i}-content`}
-                        id={`panel${i}-header`}
-                      >
+                        expandIcon={<ExpandMoreIcon 
+                          style={{color:"#4ED2EF80" ,fontSize:"30px"}}
+                          onClick={()=>toggleAcordion(expand === i ?false:i)}/>}
+                        aria-controls={`panel${i}a-content`}
+                       >
                         <div className="w-full flex items-center justify-between  gap-1">
                           <p className="px-2 w-[60px] text-[14px] text-[#B3B3B3]  ">
                             {item?.point}
                           </p>
                           <p className="px-2 w-[60px] text-[#B3B3B3]">
-                            <i
-                              className={`bi ${
-                                rating === i
-                                  ? "bi-star-fill text-[#F7D240]"
-                                  : "bi-star"
-                              }  text-[16px]`}
-                              onClick={() => setRating(i)}
-                            ></i>
+                          <i
+                    className={`bi ${
+                      rating.includes(i) ? "bi-star-fill text-[#F7D240]" : "bi-star"} text-[16px]`}
+                    onClick={() => handleStarClick(i)}
+                  ></i>
                           </p>
                           <p
                             className={`w-[60px] uppercase rounded font-semibold flex items-center justify-center h-[30px]
-                                                     ${
-                                                       item.risk.toLocaleLowerCase() ===
-                                                       "ok"
-                                                         ? "bg-[#4D9F69] text-black"
-                                                         : item.risk.toLocaleLowerCase() ===
-                                                           "crit"
-                                                         ? "bg-[#A8372D] text-white"
-                                                         : "bg-[#F7D240] text-black"
-                                                     }`}
-                          >
+                        ${
+                          item.risk.toLocaleLowerCase() ===
+                          "ok"
+                            ? "bg-[#4D9F69] text-black"
+                            : item.risk.toLocaleLowerCase() ===
+                              "crit"
+                            ? "bg-[#A8372D] text-white"
+                            : "bg-[#F7D240] text-black"
+                           }`}>
                             {item?.risk}
                           </p>
                           <div className="w-[60px] flex items-center justify-center">

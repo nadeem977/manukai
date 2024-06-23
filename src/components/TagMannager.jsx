@@ -40,7 +40,7 @@ const TagMannager = () => {
         <div className="flex items-center cursor-pointer gap-2 w-full border-[1.5px] h-[36px] rounded 	overflow-hidden  border-[#4ED2EF80] pr-3">
           <div
             onClick={() => setSearchOpen(!searchOpen)}
-            className="w-full p-2 py-3 text-[14px] h-full text-[#787878] flex items-center bg-transparent outline-none border-none">
+            className="w-full p-2 py-3 text-[14px] min-w-[200px] h-full text-[#787878] flex items-center bg-transparent outline-none border-none">
             Search
           </div>
           <SearchIcon />
@@ -53,7 +53,7 @@ const TagMannager = () => {
           <form className="search-form" onSubmit={addTag}>
             <input
               type="text"
-              className="form-control"
+              className="form-control "
               placeholder="Search anything.."
               value={input}
               onChange={(e) => setInput(e.target.value)}

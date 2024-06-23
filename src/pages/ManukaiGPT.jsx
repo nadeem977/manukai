@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Layout from "../components/Layout";
 import SideBarConponet from "../components/SideBarConponet";
 import { PlusBorderIcon, SentMessage } from "../components/Icon";
@@ -10,11 +10,25 @@ import dyamiimg from "../assets/img/dyami.png";
 const ManukaiGPT = () => {
   const [userprompts, setUserprompts] = useState("");
   const [usersms, setUsersms] = useState([]);
+  const chatEndRef = useRef(null);
+
   const sendmessage = () => {
     setUsersms((prev) => [...prev, userprompts]);
     setUserprompts("");
   };
- 
+
+  const scrollToBottom = () => {
+    chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+  const handelsmssend = (event) => {
+    if (event.key === "Enter") {
+      setUsersms((prev) => [...prev, userprompts]);
+      setUserprompts("");
+    }
+  };
+  useEffect(() => {
+    scrollToBottom();
+  }, [usersms]);
   return (
     <>
       <Layout sidebar={<SideBarConponet />}>
@@ -29,13 +43,17 @@ const ManukaiGPT = () => {
 
               {/* GPT replay */}
               <GptAnlatycs />
-            
+
               <div className="flex items-center gap-3 pl-1 w-full mt-4">
                 <img src={dyamiimg} alt="icons" />
-                <h1 className="text-[16px] mt-1">first chat send by user (2)</h1>
+                <h1 className="text-[16px] mt-1">
+                  first chat send by user (2)
+                </h1>
               </div>
               {/* GPT replay */}
               <GptReplay />
+              <div ref={chatEndRef} />
+
               {usersms.map((text, i) => (
                 <Usersms key={i} text={text} />
               ))}
@@ -47,6 +65,7 @@ const ManukaiGPT = () => {
                 className="w-full h-full pl-5 text-white outline-none border-none rounded-full text-[16px] bg-transparent"
                 value={userprompts}
                 onChange={(e) => setUserprompts(e.target.value)}
+                onKeyDown={handelsmssend}
               />
               <div
                 className="w-[48px] h-[48px] flex items-center justify-center rounded-full bg-[#091D22] cursor-pointer mr-3"
