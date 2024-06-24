@@ -198,7 +198,7 @@ a {
 }
 .main-section {
 	display: flex;
-	min-height: calc(100dvh - 79px);
+	 height: calc(100vh - 92px);
 	.sidebar {
 		width: 100%;
 		max-width:325px;
@@ -270,7 +270,12 @@ a {
 .article .h-100 {
 	height: 100%;
 }
-
+@media (max-width: 950px) {
+	.main-section {
+		min-height: calc(100vh - 92px);
+		height: auto;
+	}
+}
 .line1 {
 	opacity: 0.4;
 	background: linear-gradient(180deg, #b3b3b3 0%, rgba(179, 179, 179, 0) 100%);

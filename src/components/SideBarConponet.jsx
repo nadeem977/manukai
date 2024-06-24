@@ -307,14 +307,14 @@ export const Surveillance = ()=>{
               <AccordionDetails> 
                 <ul className="submenu">
                <li> <div className="chamkila my-2 pading overflow-visible  bg-[#0f2128] text-white"
-                onClick={CreateNewChat}>New Chat</div></li>
+                onClick={CreateNewChat}>News item</div></li>
                   {newSurvel?.map((_, inx) => (
                     <li key={inx}>
                       <div className={`chamkila overflow-visible   
                       ${location  === `/int-deck/Surveillance/${inx}` ? "bg-[#0f2128] text-white" : "textred"}`}>
                    {editname === inx ? <input type="text" className="p-1 my-2 w-full bg-[#4ED2EF80] text-black  border-none" onKeyDown={handelrename}/>:
                    <Link to={`/int-deck/Surveillance/${inx}`}
-                    className="w-full h-full p-[10px] hover:text-white">New Chat {inx +1}</Link>}
+                    className="w-full h-full p-[10px] hover:text-white">News item {inx +1}</Link>}
                        <div className="sideDropdown"> 
                         <Dropdown>
                           <Dropdown.Toggle variant="success" id="dropdown-basic">

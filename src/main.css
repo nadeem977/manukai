@@ -83,7 +83,9 @@ select .options:focus {
 .mainChecks {
     margin-left: 1rem;
 }
-
+.shdossye{
+    box-shadow: 0px 4px 14px 0px #17CDFB30;
+}
 .mainChecks .form-check .form-check-input {
     width: 13px;
     height: 13px;
@@ -106,7 +108,7 @@ select .options:focus {
 }
 
 .setHeight {
-    height: calc(100vh - 123px);
+    height: calc(100vh - 160px);
 }
 
 .alert-yellow,

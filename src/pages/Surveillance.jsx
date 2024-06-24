@@ -79,7 +79,7 @@ const Surveillance = () => {
       }
     });
   };
-console.log(rating)
+ 
 
 
   return (
@@ -200,8 +200,7 @@ console.log(rating)
                           <i
                     className={`bi ${
                       rating.includes(i) ? "bi-star-fill text-[#F7D240]" : "bi-star"} text-[16px]`}
-                    onClick={() => handleStarClick(i)}
-                  ></i>
+                    onClick={() => handleStarClick(i)}></i>
                           </p>
                           <p
                             className={`w-[60px] uppercase rounded font-semibold flex items-center justify-center h-[30px]
@@ -288,11 +287,11 @@ console.log(rating)
                   </React.Fragment>
                 ))}
               </section>
-              <div className="min-w-[360px]">
+              <iv className="min-w-[360px]">
                 <p className="p-2 w-full text-center text-[#B3B3B3] text-[11px]">
                   CHAT
                 </p>
-                <div className="w-full rounded-lg bg-[#0f252a] h-full p-2">
+                <div className="w-full rounded-lg bg-[#0f252a] p-2">
                   <div>
                     <div className="flex items-center gap-3 w-fit mx-auto py-3">
                       <img src={taligramimg} alt="icon" />
@@ -418,7 +417,7 @@ console.log(rating)
                     </div>
                   </div>
                 </div>
-              </div>
+              </iv>
             </div>
           </div>
         </div>
