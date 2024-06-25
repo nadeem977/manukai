@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Layout from "../components/Layout";
 import SideBarConponet from "../components/SideBarConponet";
 import SettingsIcon from "@mui/icons-material/Settings";
@@ -20,6 +20,7 @@ import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import taligramimg from "../assets/img/taligram.png";
 import SpeakerNotesIcon from "@mui/icons-material/SpeakerNotes";
+import { AppContext } from "../contexts/authContext";
 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -56,8 +57,8 @@ const Surveillance = () => {
   const [reversingData, setReversingData] = useState(false);
   const [profanitytoggle, setProfanitytoggle] = React.useState(false);
   const [translatetoggle, setTranslatetoggle] = React.useState(false);
-
-
+  const {showchats} = useContext(AppContext)
+ 
 
   const [expand, setExpand] = React.useState(false);
   const toggleAcordion = (key) => {
@@ -126,7 +127,7 @@ const Surveillance = () => {
               </div>
             </div>
             {panelOpen && <ControlPanel />}
-            <div className=" overflow-x-auto flex gap-3   bg-[#0F2A31] rounded m-2 pr-2">
+            <div className=" overflow-x-auto flex gap-3   bg-[#0F2A31] rounded m-2  ">
               <section className="min-w-[1370px]  text-white">
                 <div className="flex items-center justify-between gap-1 text-[#B3B3B3] border-b-[1px] border-[#2b2b37] text-[11px] pr-4">
                   <p
@@ -147,9 +148,9 @@ const Surveillance = () => {
                   <p className="p-2 flex justify-center tracking-[2px] w-[60px] ">
                     RISK
                   </p>
-                  <p className="p-2 flex justify-center tracking-[2px] w-[60px] ">
+                 {showchats && <p className="p-2 flex justify-center tracking-[2px] w-[60px] ">
                     APP
-                  </p>
+                  </p>}
                   <p className="p-2 flex items-start tracking-[2px] w-[250px] ">
                     TITLE
                   </p>
@@ -215,13 +216,13 @@ const Surveillance = () => {
                            }`}>
                             {item?.risk}
                           </p>
-                          <div className="w-[60px] flex items-center justify-center">
+                         {showchats && <div className="w-[60px] flex items-center justify-center">
                             <img
                               src={item.appicon}
                               alt=""
                               className="w-[30px] h-[30px] object-cover"
                             />
-                          </div>
+                          </div>}
                           <p className="px-2 w-[250px] text-[16px] font-semibold">
                             {item?.title}
                           </p>
@@ -287,7 +288,7 @@ const Surveillance = () => {
                   </React.Fragment>
                 ))}
               </section>
-              <iv className="min-w-[360px]">
+             {showchats && <div className="min-w-[360px] mr-2">
                 <p className="p-2 w-full text-center text-[#B3B3B3] text-[11px]">
                   CHAT
                 </p>
@@ -417,7 +418,7 @@ const Surveillance = () => {
                     </div>
                   </div>
                 </div>
-              </iv>
+              </div>}
             </div>
           </div>
         </div>

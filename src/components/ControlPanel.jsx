@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import SettingsIcon from '@mui/icons-material/Settings';
 import { AIcons, IconsRadars, KeyIcons, KysIconsColors, NewsItemsH, PausIcons, SoundIcons } from "./Icon";
 import DeleteSharpIcon from '@mui/icons-material/DeleteSharp';
 import Checkbox from '@mui/material/Checkbox';
 import { styled } from '@material-ui/styles';  
 import MuiSelect from './MuiSelect';
+import { AppContext } from '../contexts/authContext';
 
  
 
@@ -24,7 +25,19 @@ const ControlPanel = () => {
     const [active1, setActive1] = useState("1")
     const [active2, setActive2] = useState("1")
     const[defualtvalues, setDefualtvalues] = useState({okval:"(“protest” & “demonstration”) + “rally” + “disobedience” + (“public assembly” & (“environment” + “green” + “co2”))",warnval:"(“protest” & “demonstration”) ",critval:"(“protest” & “demonstration”) "})
+    const {setShowChats} = useContext(AppContext)
+
+    const handelNews = ()=>{
+        setActive1("1")
+        setShowChats(false)
+      }
+    const handelsocial = ()=>{
+        setActive1("2")
+        setShowChats(true)
+      }
+
     return (
+
         <>
             <section className="p-2">
                 <div className="border-[1.5px] border-[#4ED2EF80] w-full shadoBax mt-3 p-2 rounded flex  flex-col gap-2 lg:flex-row">
@@ -33,10 +46,10 @@ const ControlPanel = () => {
                         <div className="border-[1.5px] mt-2 font-medium border-[#4ED2EF80] rounded p-2 grid grid-cols-1 sm:grid-cols-3 gap-2">
                             <button className={`border-[1px] text-[12px] justify-center border-[#4ED2EF80] 
                                 rounded px-2 p-1 flex items-center gap-2 ${active1 === "1" ? "bg-[#12A5C6] text-black" : ""}`}
-                                onClick={() => setActive1("1")}>
+                                onClick={handelNews}>
                                 <NewsItemsH width="15px" actives={active1} /> News Articles
                             </button>
-                            <button className={`border-[1px] text-[12px] justify-center border-[#4ED2EF80] rounded px-2 p-1 flex items-center gap-2 ${active1 === "2" ? "bg-[#12A5C6] text-black" : ""}`} onClick={() => setActive1("2")}>
+                            <button className={`border-[1px] text-[12px] justify-center border-[#4ED2EF80] rounded px-2 p-1 flex items-center gap-2 ${active1 === "2" ? "bg-[#12A5C6] text-black" : ""}`} onClick={handelsocial}>
                                 <AIcons actives={active1} /> Social Media
                             </button>
                             <button className={`border-[1px] text-[12px] justify-center border-[#4ED2EF80] rounded px-2 p-1 flex items-center gap-1

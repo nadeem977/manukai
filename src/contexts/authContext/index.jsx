@@ -16,6 +16,7 @@ export const ContextProvider = ({ children }) => {
   const[openmodal, setOpenmodal] = useState(false);
   const[openmodals, setOpenmodals] = useState(false);
   const [showmodal , setShowModal] = useState({login:true,register:false,});
+  const [showchats, setShowChats] = useState(false)
   // useEffect(() => {
   //   const unsubscribe = onAuthStateChanged(auth, (user) => {
   //     initializeUser(user);
@@ -60,7 +61,8 @@ export const ContextProvider = ({ children }) => {
     newSurvel, setSurvel,
     showmodal , setShowModal,
     openmodal, setOpenmodal,
-    openmodals, setOpenmodals
+    openmodals, setOpenmodals,
+    showchats, setShowChats
   };
 
   return (
